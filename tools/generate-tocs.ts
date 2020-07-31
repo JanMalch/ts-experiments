@@ -56,7 +56,7 @@ function getSummary(filePath: string) {
         ?.split('\n')
         ?.map((line) => line.trim().substring(2))
         ?.join('\n')
-        .trim() ?? ''
+        ?.trim() ?? ''
     );
   }
 }
