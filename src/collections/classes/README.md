@@ -18,6 +18,4 @@ Classes that represent certain types of collections.
 ### [stack](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/classes/stack.ts)
 
 [![1 export](https://img.shields.io/badge/exports-1-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/classes/stack.ts)
-
----
 <!-- TOC:END -->

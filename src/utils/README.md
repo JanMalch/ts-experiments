@@ -32,6 +32,4 @@ Cleaning all kinds of data and values.
 ### [strings](https://github.com/JanMalch/ts-experiments/blob/master/src/utils/strings.ts)
 
 [![1 export](https://img.shields.io/badge/exports-1-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/utils/strings.ts)
-
----
 <!-- TOC:END -->

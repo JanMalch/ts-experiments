@@ -44,6 +44,4 @@ These files contain function that create new collections or values based on othe
 These files contain function that are used as the first argument for [`Array#reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
 [![8 exports](https://img.shields.io/badge/exports-8-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/operations/reducers/)
-
----
 <!-- TOC:END -->

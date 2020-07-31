@@ -119,7 +119,7 @@ function processReadme(readme: string) {
     .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
   const toc = children
     .map(
-      (c) =>
+      (c, i) =>
         `### ${mdLink(c.path, c.name, c.type)}
 
 ${c.summary}
@@ -132,7 +132,7 @@ ${mdLink(
   c.type
 )}
 
----`.replace('\n\n\n\n', '\n\n')
+${i < children.length - 1? '---' : ''}`.trimRight().replace('\n\n\n\n', '\n\n')
     )
     .join('\n\n');
   persistToc(readme, toc);

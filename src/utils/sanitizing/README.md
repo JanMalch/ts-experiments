@@ -30,6 +30,4 @@ Cleaning all kinds of data and values.
 ### [types](https://github.com/JanMalch/ts-experiments/blob/master/src/utils/sanitizing/types.ts)
 
 [![3 exports](https://img.shields.io/badge/exports-3-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/utils/sanitizing/types.ts)
-
----
 <!-- TOC:END -->
