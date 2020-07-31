@@ -13,7 +13,11 @@ Create new collections based on other collections, reduce them to a certain valu
 
 Classes that represent certain types of collections.
 
+![2 exports](https://img.shields.io/badge/exports-2-blue)
+
 ### [operations](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/operations/)
 
 These files contain function that create new collections or values based on other collections.
+
+![37 exports](https://img.shields.io/badge/exports-37-blue)
 <!-- TOC:END -->

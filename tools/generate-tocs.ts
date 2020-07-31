@@ -1,9 +1,11 @@
-import glob from 'glob';
 import fs from 'fs';
+import glob from 'glob';
 import path from 'path';
 
 const mdLink = (relPath: string, name: string, type: 'blob' | 'tree') =>
   `[${name}](https://github.com/JanMalch/ts-experiments/${type}/master/${relPath})`;
+
+// regex with the help of https://regex101.com/
 
 const getResultGroupsOfRegex = (regex: RegExp, content: string): string[] => {
   let m;
@@ -58,6 +60,51 @@ function getSummary(filePath: string) {
   }
 }
 
+const exportCounts: Record<string, number> = {};
+
+const countRegexOccurences = (regex: RegExp, content: string): number => {
+  let m;
+  let count = 0;
+
+  while ((m = regex.exec(content)) !== null) {
+    // This is necessary to avoid infinite loops with zero-width matches
+    if (m.index === regex.lastIndex) {
+      regex.lastIndex++;
+    }
+
+    count++;
+  }
+  return count;
+};
+
+function countExports(fileOrDirectory: string): number {
+  let count = 0;
+  if (fileOrDirectory.endsWith('.ts')) {
+    count = countRegexOccurences(
+      /export /g,
+      fs.readFileSync(fileOrDirectory, 'utf8')
+    );
+  } else {
+    const directories = glob.sync(`${fileOrDirectory}/*/`);
+    const countFromNestedDirs = directories.reduce(
+      (acc, d) => acc + countExports(d),
+      0
+    );
+    const directFiles = glob.sync(`${fileOrDirectory}/*.ts`);
+    const countFromDirectFiles = directFiles.reduce((acc, file) => {
+      const sum = countRegexOccurences(
+        /export /g,
+        fs.readFileSync(file, 'utf8')
+      );
+      return acc + sum;
+    }, 0);
+    count = countFromDirectFiles + countFromNestedDirs;
+  }
+
+  exportCounts[fileOrDirectory] = count;
+  return exportCounts[fileOrDirectory];
+}
+
 function processReadme(readme: string) {
   const directory = readme.slice(0, -10);
   const children = glob
@@ -67,13 +114,17 @@ function processReadme(readme: string) {
       type: c.endsWith('/') ? 'tree' : ('blob' as 'tree' | 'blob'),
       name: path.basename(c, '.ts'),
       summary: getSummary(c),
+      exports: countExports(c),
     }))
     .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
   const toc = children
-    .map((c) =>
-      `### ${mdLink(c.path, c.name, c.type)}
+    .map(
+      (c) =>
+        `### ${mdLink(c.path, c.name, c.type)}
 
-${c.summary}`.trimRight()
+${c.summary}
+
+![${c.exports} export${c.exports === 1 ? '' : 's'}](https://img.shields.io/badge/exports-${c.exports}-blue)`
     )
     .join('\n\n');
   persistToc(readme, toc);
