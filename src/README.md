@@ -15,6 +15,10 @@ It would be nice if you add an `@author` doc tag that points to this repository.
 You are also welcome to make a PR for new additions and improvements.
 Make sure to checkout [the list below](#notable-libraries-and-links) for actually battle-tested libraries and helpful links.
 
+<!-- TOTAL:START -->
+[![138 exports](https://img.shields.io/badge/exports-138-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
+<!-- TOTAL:END -->
+
 ## Contents
 
 <!-- TOC:START -->

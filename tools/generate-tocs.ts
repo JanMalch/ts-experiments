@@ -1,3 +1,4 @@
+import { plus } from '@ts-experiments/collections/operations/core';
 import fs from 'fs';
 import glob from 'glob';
 import path from 'path';
@@ -61,6 +62,7 @@ function getSummary(filePath: string) {
 }
 
 const exportCounts: Record<string, number> = {};
+const firstLevelCounts: Record<string, number> = {};
 
 const countRegexOccurences = (regex: RegExp, content: string): number => {
   let m;
@@ -78,13 +80,14 @@ const countRegexOccurences = (regex: RegExp, content: string): number => {
 };
 
 function countExports(fileOrDirectory: string): number {
-  let count = 0;
+  let count;
   if (fileOrDirectory.endsWith('.ts')) {
     count = countRegexOccurences(
       /export /g,
       fs.readFileSync(fileOrDirectory, 'utf8')
     );
   } else {
+    const isFirstLevelDir = fileOrDirectory.indexOf('/', 5) === fileOrDirectory.length - 1;
     const directories = glob.sync(`${fileOrDirectory}/*/`);
     const countFromNestedDirs = directories.reduce(
       (acc, d) => acc + countExports(d),
@@ -99,6 +102,9 @@ function countExports(fileOrDirectory: string): number {
       return acc + sum;
     }, 0);
     count = countFromDirectFiles + countFromNestedDirs;
+    if (isFirstLevelDir) {
+      firstLevelCounts[fileOrDirectory] = count;
+    }
   }
 
   exportCounts[fileOrDirectory] = count;
@@ -139,6 +145,20 @@ ${i < children.length - 1 ? '---' : ''}`
   persistToc(readme, toc);
 }
 
+function persistTotalCount() {
+  const totalExports = Object.values(firstLevelCounts).reduce(plus);
+  const content = fs.readFileSync('./src/README.md', 'utf8');
+  const regex = /<!-- TOTAL:START -->.+<!-- TOTAL:END -->/s;
+  const updated = content.replace(
+    regex,
+    `<!-- TOTAL:START -->
+[![${totalExports} exports](https://img.shields.io/badge/exports-${totalExports}-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
+<!-- TOTAL:END -->`
+  );
+  fs.writeFileSync('./src/README.md', updated);
+}
+
 fs.copyFileSync('./README.md', './src/README.md');
 glob.sync('src/**/README.md').forEach(processReadme);
+persistTotalCount()
 fs.copyFileSync('./src/README.md', './README.md');

@@ -4,10 +4,10 @@
   "description": "A collection of fun and/or useful things you can do with TypeScript.",
   "scripts": {
     "build": "tsc",
-    "prelint": "ts-node tools/check-for-missing-author-doc-tag.ts",
+    "prelint": "ts-node -r tsconfig-paths/register tools/check-for-missing-author-doc-tag.ts",
     "lint": "eslint src/**/*.ts --fix",
     "test": "jest",
-    "tocs": "ts-node tools/generate-tocs.ts",
+    "tocs": "ts-node -r tsconfig-paths/register tools/generate-tocs.ts",
     "tocs:commit": "git diff-index --quiet HEAD && npm run tocs && git add . && git commit -m \"chore(tocs): update TOCS\" && git push",
     "prettier": "prettier --write \"./**/*.{ts,js,json,md}\""
   },
@@ -36,6 +36,7 @@
     "pretty-quick": "^2.0.1",
     "ts-jest": "^26.1.4",
     "ts-node": "^8.10.2",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^3.9.7"
   },
   "jest": {
