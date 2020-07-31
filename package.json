@@ -9,8 +9,6 @@
     "test": "jest",
     "tocs": "ts-node tools/generate-tocs.ts",
     "tocs:commit": "git diff-index --quiet HEAD && npm run tocs && git add . && git commit -m \"chore(tocs): update TOCS\" && git push",
-    "changelog": "standard-version",
-    "postchangelog": "git add CHANGELOG.md && git commit -m \"docs: update CHANGELOG.md\" && git push",
     "prettier": "prettier --write \"./**/*.{ts,js,json,md}\""
   },
   "keywords": [],
@@ -36,7 +34,6 @@
     "jest": "^26.2.2",
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
-    "standard-version": "^8.0.2",
     "ts-jest": "^26.1.4",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
