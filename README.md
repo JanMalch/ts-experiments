@@ -6,9 +6,14 @@ _A collection of fun and/or useful things you can do with TypeScript._
 
 <!-- SUMMARY:END -->
 
-Grain of salt: naming, untested, good practices, etc
+Take everything you see here with a grain of salt. This is more or less a dump of code snippets with some tests and docs.
+I do not claim that all these functions, types and classes have good and correct naming, well done tests or follow good practices, etc.
+If no caveats are mentioned, then that doesn't neccessarly mean there aren't any.
 
-Caveats
+That being said: feel free to be inspired and copy any bit of code you can find in this repository.
+It would be nice if you add an `@author` doc tag that points to this repository.
+You are also welcome to make a PR for new additions and improvements.
+Make sure to checkout [the list below](#notable-libraries-and-links) for actually battle-tested libraries and helpful links.
 
 ## Contents
 
@@ -70,7 +75,7 @@ This and that
 [![15 exports](https://img.shields.io/badge/exports-15-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/utils/)
 <!-- TOC:END -->
 
-## Notable libraries
+## Notable libraries and links
 
 - [comparing](https://github.com/JanMalch/comparing)
 - [fp-ts](https://github.com/gcanti/fp-ts)
