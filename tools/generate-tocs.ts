@@ -130,7 +130,9 @@ ${mdLink(
     c.exports === 1 ? '' : 's'
   }](https://img.shields.io/badge/exports-${c.exports}-blue)`,
   c.type
-)}`
+)}
+
+---`
     )
     .join('\n\n');
   persistToc(readme, toc);

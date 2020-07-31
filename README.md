@@ -21,11 +21,15 @@ Create new collections based on other collections, reduce them to a certain valu
 
 [![40 exports](https://img.shields.io/badge/exports-40-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/)
 
+---
+
 ### [contracts](https://github.com/JanMalch/ts-experiments/tree/master/src/contracts/)
 
 Contracts for code
 
 [![7 exports](https://img.shields.io/badge/exports-7-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/contracts/)
+
+---
 
 ### [decorators](https://github.com/JanMalch/ts-experiments/tree/master/src/decorators/)
 
@@ -33,11 +37,15 @@ Decorator stuff
 
 [![4 exports](https://img.shields.io/badge/exports-4-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/decorators/)
 
+---
+
 ### [patterns](https://github.com/JanMalch/ts-experiments/tree/master/src/patterns/)
 
 OOP Patterns
 
 [![20 exports](https://img.shields.io/badge/exports-20-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/patterns/)
+
+---
 
 ### [problems](https://github.com/JanMalch/ts-experiments/tree/master/src/problems/)
 
@@ -45,17 +53,23 @@ RFC 7807 utils
 
 [![0 exports](https://img.shields.io/badge/exports-0-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/problems/)
 
+---
+
 ### [types](https://github.com/JanMalch/ts-experiments/tree/master/src/types/)
 
 All kinds of types, that help you create new types.
 
 [![52 exports](https://img.shields.io/badge/exports-52-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/types/)
 
+---
+
 ### [utils](https://github.com/JanMalch/ts-experiments/tree/master/src/utils/)
 
 This and that
 
 [![14 exports](https://img.shields.io/badge/exports-14-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/utils/)
+
+---
 <!-- TOC:END -->
 
 ## Notable
