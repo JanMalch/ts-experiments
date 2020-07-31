@@ -37,7 +37,7 @@ These files contain function that create new collections or values based on othe
 
 
 
-[![10 exports](https://img.shields.io/badge/exports-10-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/guards.ts)
+[![11 exports](https://img.shields.io/badge/exports-11-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/guards.ts)
 
 ### [reducers](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/operations/reducers/)
 

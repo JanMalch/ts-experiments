@@ -34,9 +34,10 @@ export type ToStringFn = ToXFn<string>;
 export type ToNumberFn = ToXFn<number>;
 export type ToDateFn = ToXFn<Date>;
 
-export type ObjectMapper<T extends {}, O extends {} = T> = Mapper<T, O>;
-
-export type ItemIndexArrayFn<T, O> = (item: T, index: number, array: T[]) => O;
+export type ObjectMapper<
+  T extends Record<string, unknown>,
+  O extends Record<string, unknown> = T
+> = Mapper<T, O>;
 
 /**
  * A function that is typically used for callback arguments in Array methods.
@@ -50,57 +51,3 @@ export type VIAFn<I, O> = (
   currentIndex: number,
   array: I[]
 ) => O;
-
-export type KeyValueTuple<K, V> = [K, V];
-export interface KeyValue<K, V> {
-  key: K;
-  value: V;
-}
-
-export type Falsy = false | 0 | '' | null | undefined | typeof NaN;
-export type Truthy<T> = T extends Falsy ? never : T;
-
-export type ObjectEntry<T> = KeyValueTuple<string, T>;
-export type ObjectEntries<T> = Array<ObjectEntry<T>>;
-
-/**
- * Matches any key of `T`, whose corresponding value extends the type `V`.
- * @see PickValues
- * @example
- * interface Person {
- *   id: string;
- *   name: string;
- *   age: number;
- * }
- * type FieldNameOfPersonWithStringValue = PickKeys<Person, string>;
- * // "name" | "id"
- * @author https://github.com/JanMalch/ts-experiments
- */
-export type PickKeys<T, V> = {
-  [P in keyof T]: T[P] extends V ? P : never;
-}[keyof T];
-
-/**
- * Type of an object with all the fields from `T`, whose values extends the type `V`.
- * @see PickKeys
- * @example
- * interface Person {
- *   id: string;
- *   name: string;
- *   age: number;
- * }
- * type StringFieldsOfPerson = PickValues<Person, string>;
- * // { name: string, id: string }
- * @author https://github.com/JanMalch/ts-experiments
- */
-export type PickValues<T, V> = Pick<T, PickKeys<T, V>>;
-
-/**
- * Defines a type with the same keys as T, but different value types
- * @author https://github.com/JanMalch/ts-experiments
- */
-export type SameKeys<T, V> = Record<keyof T, V>;
-
-export type KeyOf<T> = keyof T;
-export type KeysOf<T> = Array<keyof T>;
-export type ValuesOf<T> = T[keyof T];

@@ -1,4 +1,6 @@
-import { Falsy, PickKeys, TypeGuard } from '@ts-experiments/types/functions';
+import { PickKeys } from '@ts-experiments/types/collections';
+import { TypeGuard } from '@ts-experiments/types/functions';
+import { Class, Falsy } from '@ts-experiments/types/misc';
 
 export const isNumber = (x: unknown): x is number => typeof x === 'number';
 export const isString = (x: unknown): x is string => typeof x === 'string';
@@ -18,6 +20,10 @@ export function hasFunction<
     value.hasOwnProperty(key) &&
     isFunction<F>((value as any)[key])
   );
+}
+
+export function isInstanceOf<T>(clazz: Class<T>): TypeGuard<T> {
+  return (value): value is T => value instanceof clazz;
 }
 
 export function isObjectLiteral(
