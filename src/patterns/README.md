@@ -2,7 +2,7 @@
 
 <!-- SUMMARY:START -->
 
-OOP Patterns
+Various utilties that simplify patterns.
 
 <!-- SUMMARY:END -->
 
