@@ -11,6 +11,7 @@ export type TypeGuard<T> = (value: any) => value is T;
  * @typeparam A the type of the accumulator
  * @typeparam T the type of the current item
  * @see reduce
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export type Reducer<A, T> = (
   accumulator: A,
@@ -24,6 +25,7 @@ export type BiMapper<A, B, O> = (valueA: A, valueB: B) => O;
 
 /**
  * Type alias for a function that compares two values for sorting purposes
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export type Comparator<T> = (a: T, b: T) => number;
 
@@ -41,6 +43,7 @@ export type ItemIndexArrayFn<T, O> = (item: T, index: number, array: T[]) => O;
  * VIA stands for Value-Index-Array.
  * @typeparam I the type of the values
  * @typeparam O the type of the return type
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export type VIAFn<I, O> = (
   currentValue: I,
@@ -71,6 +74,7 @@ export type ObjectEntries<T> = Array<ObjectEntry<T>>;
  * }
  * type FieldNameOfPersonWithStringValue = PickKeys<Person, string>;
  * // "name" | "id"
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export type PickKeys<T, V> = {
   [P in keyof T]: T[P] extends V ? P : never;
@@ -87,11 +91,13 @@ export type PickKeys<T, V> = {
  * }
  * type StringFieldsOfPerson = PickValues<Person, string>;
  * // { name: string, id: string }
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export type PickValues<T, V> = Pick<T, PickKeys<T, V>>;
 
 /**
  * Defines a type with the same keys as T, but different value types
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export type SameKeys<T, V> = Record<keyof T, V>;
 

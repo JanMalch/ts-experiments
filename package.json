@@ -6,6 +6,7 @@
     "build": "tsc",
     "lint": "eslint {src,test}/**/*.ts --fix",
     "test": "jest",
+    "doctags": "ts-node tools/check-for-missing-author-doc-tag.ts",
     "tocs": "ts-node tools/generate-tocs.ts",
     "prettier": "prettier --write \"./**/*.{ts,js,json,md}\""
   },

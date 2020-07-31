@@ -9,7 +9,6 @@
  *   'true': [0, 1, 2],
  *   'false': [3, 4, 5, 6]
  * });
- * @author https://github.com/JanMalch/ts-experiments
  */
 import { Reducer, VIAFn } from '@ts-experiments/types/functions';
 
@@ -46,6 +45,7 @@ export function groupBy<T>(
  *  '2': 4,
  *  '3': 6,
  * });
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export function associateWith<I, O>(
   valueSelector: VIAFn<I, O>
@@ -77,6 +77,7 @@ export function associateWith<I, O>(
  *   '#2': 4,
  *   '#3': 6,
  * });
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export function associate<I, O = I>(
   transform: VIAFn<I, [any, O]>

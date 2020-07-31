@@ -124,7 +124,9 @@ function processReadme(readme: string) {
 
 ${c.summary}
 
-![${c.exports} export${c.exports === 1 ? '' : 's'}](https://img.shields.io/badge/exports-${c.exports}-blue)`
+![${c.exports} export${
+          c.exports === 1 ? '' : 's'
+        }](https://img.shields.io/badge/exports-${c.exports}-blue)`
     )
     .join('\n\n');
   persistToc(readme, toc);

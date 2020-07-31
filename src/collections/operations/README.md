@@ -9,33 +9,24 @@ These files contain function that create new collections or values based on othe
 ## Contents
 
 <!-- TOC:START -->
+
 ### [arrays](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/arrays.ts)
-
-
 
 ![3 exports](https://img.shields.io/badge/exports-3-blue)
 
 ### [core](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/core.ts)
 
-
-
 ![12 exports](https://img.shields.io/badge/exports-12-blue)
 
 ### [dicts](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/dicts.ts)
-
-
 
 ![3 exports](https://img.shields.io/badge/exports-3-blue)
 
 ### [filtering](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/filtering.ts)
 
-
-
 ![1 export](https://img.shields.io/badge/exports-1-blue)
 
 ### [guards](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/guards.ts)
-
-
 
 ![10 exports](https://img.shields.io/badge/exports-10-blue)
 
@@ -44,4 +35,5 @@ These files contain function that create new collections or values based on othe
 These files contain function that are used as the first argument for [`Array#reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
 ![8 exports](https://img.shields.io/badge/exports-8-blue)
+
 <!-- TOC:END -->

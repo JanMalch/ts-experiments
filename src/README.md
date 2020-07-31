@@ -13,6 +13,7 @@ Caveats
 ## Contents
 
 <!-- TOC:START -->
+
 ### [collections](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/)
 
 Here you can find everything concerning collections:
@@ -26,6 +27,7 @@ Create new collections based on other collections, reduce them to a certain valu
 All kinds of types, that help you create new types.
 
 ![32 exports](https://img.shields.io/badge/exports-32-blue)
+
 <!-- TOC:END -->
 
 ## Notable
