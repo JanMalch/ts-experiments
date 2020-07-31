@@ -76,6 +76,6 @@ This and that
 
 ## Notable
 
-[comparing](https://github.com/JanMalch/comparing)
-io-ts
-typescript decorators
+- [comparing](https://github.com/JanMalch/comparing)
+- [fp-ts](https://github.com/gcanti/fp-ts)
+- [Typescript Decorators Examples](https://github.com/arolson101/typescript-decorators#readme)
