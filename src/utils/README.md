@@ -9,6 +9,12 @@ This and that
 ## Contents
 
 <!-- TOC:START -->
+### [loading-indicator](https://github.com/JanMalch/ts-experiments/blob/master/src/utils/loading-indicator.ts)
+
+[![1 export](https://img.shields.io/badge/exports-1-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/utils/loading-indicator.ts)
+
+---
+
 ### [once-n-lazy](https://github.com/JanMalch/ts-experiments/blob/master/src/utils/once-n-lazy.ts)
 
 [![2 exports](https://img.shields.io/badge/exports-2-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/utils/once-n-lazy.ts)

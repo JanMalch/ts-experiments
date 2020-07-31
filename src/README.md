@@ -67,7 +67,7 @@ All kinds of types, that help you create new types.
 
 This and that
 
-[![14 exports](https://img.shields.io/badge/exports-14-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/utils/)
+[![15 exports](https://img.shields.io/badge/exports-15-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/utils/)
 <!-- TOC:END -->
 
 ## Notable
