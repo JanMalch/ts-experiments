@@ -124,7 +124,6 @@ function processReadme(readme: string) {
 
 ${c.summary}
 
-
 ${mdLink(
   c.path,
   `![${c.exports} export${
@@ -133,7 +132,7 @@ ${mdLink(
   c.type
 )}
 
----`
+---`.replace('\n\n\n\n', '\n\n')
     )
     .join('\n\n');
   persistToc(readme, toc);
