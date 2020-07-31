@@ -41,7 +41,7 @@ Decorator stuff
 
 ### [patterns](https://github.com/JanMalch/ts-experiments/tree/master/src/patterns/)
 
-OOP Patterns
+Various utilties that simplify patterns.
 
 [![20 exports](https://img.shields.io/badge/exports-20-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/patterns/)
 

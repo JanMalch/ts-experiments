@@ -41,7 +41,7 @@ Decorator stuff
 
 ### [patterns](https://github.com/JanMalch/ts-experiments/tree/master/src/patterns/)
 
-OOP Patterns
+Various utilties that simplify patterns.
 
 [![20 exports](https://img.shields.io/badge/exports-20-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/patterns/)
 
@@ -74,4 +74,5 @@ This and that
 
 - [comparing](https://github.com/JanMalch/comparing)
 - [fp-ts](https://github.com/gcanti/fp-ts)
+- [lodash](https://github.com/lodash/lodash)
 - [Typescript Decorators Examples](https://github.com/arolson101/typescript-decorators#readme)
