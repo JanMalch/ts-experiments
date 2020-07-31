@@ -8,6 +8,7 @@
     "lint": "eslint src/**/*.ts --fix",
     "test": "jest",
     "tocs": "ts-node tools/generate-tocs.ts",
+    "tocs:commit": "git diff-index --quiet HEAD && npm run tocs && git add . && git commit -m \"chore(tocs): update TOCS\" && git push",
     "prettier": "prettier --write \"./**/*.{ts,js,json,md}\""
   },
   "keywords": [],
