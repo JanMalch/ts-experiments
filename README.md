@@ -1,4 +1,4 @@
-# ts-experiments  <a href="https://www.github.com/JanMalch/ts-experiments"><img src="https://user-images.githubusercontent.com/25508038/89055705-300f1180-d35b-11ea-90f9-b98d82922636.png" width="90" height="90" align="right"></a>  
+# ts-experiments <a href="https://www.github.com/JanMalch/ts-experiments"><img src="https://user-images.githubusercontent.com/25508038/89055705-300f1180-d35b-11ea-90f9-b98d82922636.png" width="90" height="90" align="right"></a>
 
 <!-- SUMMARY:START -->
 
