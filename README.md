@@ -74,4 +74,5 @@ This and that
 
 - [comparing](https://github.com/JanMalch/comparing)
 - [fp-ts](https://github.com/gcanti/fp-ts)
+- [lodash](https://github.com/lodash/lodash)
 - [Typescript Decorators Examples](https://github.com/arolson101/typescript-decorators#readme)
