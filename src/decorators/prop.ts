@@ -13,7 +13,9 @@ export type SetterOptions<T, K extends keyof T = keyof T> =
 /**
  * Decorator to define a property with the given setter options
  * @param setter the setter function or options
- */ export function Prop<T = any, K extends keyof T = keyof T>(
+ * @author https://github.com/JanMalch/ts-experiments
+ */
+export function Prop<T = any, K extends keyof T = keyof T>(
   setter?: SetterOptions<T, K>
 ) {
   return (target: T, propertyKey: K) => {

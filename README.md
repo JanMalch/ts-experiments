@@ -55,6 +55,14 @@ RFC 7807 utils
 
 ---
 
+### [types](https://github.com/JanMalch/ts-experiments/tree/master/src/types/)
+
+All kinds of types, that help you create new types.
+
+[![52 exports](https://img.shields.io/badge/exports-52-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/types/)
+
+---
+
 ### [utils](https://github.com/JanMalch/ts-experiments/tree/master/src/utils/)
 
 This and that

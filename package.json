@@ -71,7 +71,6 @@
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged --pattern \"./**/*.{ts,js,json,md}\" && npm run lint",
-      "post-commit": "npm run tocs && git commit --amend --no-verify",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }

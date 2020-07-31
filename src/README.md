@@ -70,7 +70,7 @@ This and that
 [![15 exports](https://img.shields.io/badge/exports-15-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/utils/)
 <!-- TOC:END -->
 
-## Notable
+## Notable libraries
 
 - [comparing](https://github.com/JanMalch/comparing)
 - [fp-ts](https://github.com/gcanti/fp-ts)
