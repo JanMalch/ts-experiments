@@ -2,7 +2,7 @@
 
 <!-- SUMMARY:START -->
 
-These files contain function that are used as the first argument for [`Array#reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+These files contain function that create new collections or values based on other collections.
 
 <!-- SUMMARY:END -->
 

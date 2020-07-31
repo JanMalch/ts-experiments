@@ -15,5 +15,5 @@ Classes that represent certain types of collections.
 
 ### [operations](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/operations/)
 
-These files contain function that are used as the first argument for [`Array#reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+These files contain function that create new collections or values based on other collections.
 <!-- TOC:END -->
