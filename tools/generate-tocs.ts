@@ -117,24 +117,22 @@ function processReadme(readme: string) {
       exports: countExports(c),
     }))
     .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
-  const toc = children
+  const toc = `| Name | Summary | Exports |
+|---|---|---|
+` +
+
+    children
     .map(
       (c) =>
-        `### ${mdLink(c.path, c.name, c.type)}
-
-${c.summary}
-
-${mdLink(
+        `| ${mdLink(c.path, c.name, c.type)} | ${c.summary} | ${mdLink(
   c.path,
   `![${c.exports} export${
     c.exports === 1 ? '' : 's'
   }](https://img.shields.io/badge/exports-${c.exports}-blue)`,
   c.type
-)}
-
----`
+)} |`
     )
-    .join('\n\n');
+    .join('\n');
   persistToc(readme, toc);
 }
 
