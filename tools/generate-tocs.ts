@@ -59,10 +59,7 @@ function getSummary(filePath: string) {
 }
 
 function processReadme(readme: string) {
-  let directory = readme.slice(0, -10);
-  if (directory === '.') {
-    directory = 'src';
-  }
+  const directory = readme.slice(0, -10);
   const children = glob
     .sync(`${directory}/*{.ts,/}`)
     .map((c) => ({
@@ -82,5 +79,6 @@ ${c.summary}`.trimRight()
   persistToc(readme, toc);
 }
 
-processReadme('./README.md');
+fs.copyFileSync('./README.md', './src/README.md');
 glob.sync('src/**/README.md').forEach(processReadme);
+fs.copyFileSync('./src/README.md', './README.md');
