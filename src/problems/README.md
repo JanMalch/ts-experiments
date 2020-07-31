@@ -9,7 +9,11 @@ RFC 7807 utils
 ## Contents
 
 <!-- TOC:START -->
-| Name | Summary | Exports |
-|---|---|---|
-| [index](https://github.com/JanMalch/ts-experiments/blob/master/src/problems/index.ts) |  | [![0 exports](https://img.shields.io/badge/exports-0-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/problems/index.ts) |
+
+### [index](https://github.com/JanMalch/ts-experiments/blob/master/src/problems/index.ts)
+
+[![0 exports](https://img.shields.io/badge/exports-0-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/problems/index.ts)
+
+---
+
 <!-- TOC:END -->
