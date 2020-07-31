@@ -33,6 +33,7 @@ export abstract class Visitable<V extends Visitor = Visitor> {
  *   }
  *   declare visit: (visitable: Visitable<FooBarVisitor>) => void;
  * }
+* @author https://github.com/JanMalch/ts-experiments
  */
 export function Visitor<T>() {
   return function (

@@ -16,7 +16,7 @@ export function shuffle<T>(input: T[]): T[] {
  * Creates an array of distinct values, based on the given selector function
  * @param values input values
  * @param selector function to distinct by
- * @author https://github.com/JanMalch/ts-experiments
+* @author https://github.com/JanMalch/ts-experiments
  */
 export function distinctBy<T>(values: T[], selector: (element: T) => any): T[] {
   return Array.from(
@@ -33,7 +33,7 @@ export function distinctBy<T>(values: T[], selector: (element: T) => any): T[] {
 /**
  * Creates an array of distinct values, based on their identity
  * @param values input values
- * @author https://github.com/JanMalch/ts-experiments
+* @author https://github.com/JanMalch/ts-experiments
  */
 export function distinct<T>(values: T[]): T[] {
   return Array.from(new Set(values));

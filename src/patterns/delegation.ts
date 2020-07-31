@@ -14,6 +14,7 @@ import { Class } from '@ts-experiments/types/misc';
  *   _bar: BarClass
  * }
  * ```
+* @author https://github.com/JanMalch/ts-experiments
  */
 export type Delegations = {
   [field in keyof any]: Class<any>;
@@ -43,6 +44,7 @@ export type Delegations = {
  * const result = example.foo();
  * expect(result).toBe('foo!');
  * ```
+* @author https://github.com/JanMalch/ts-experiments
  */
 export function Delegate<T>(delegations: Delegations /*<T>*/) {
   return (target: Class<T>) => {

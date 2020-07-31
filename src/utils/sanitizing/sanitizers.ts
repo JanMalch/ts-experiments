@@ -5,6 +5,7 @@ import { ObjectSanitizers, Sanitizer, SanitizerHooks } from './types';
 
 /**
  * Bietet einen Satz von vorgefertigen Sanitizer-Funktionen, oder Funktionen um solche zu erzeugen.
+* @author https://github.com/JanMalch/ts-experiments
  */
 export class Sanitizers {
   // TODO: deutsch

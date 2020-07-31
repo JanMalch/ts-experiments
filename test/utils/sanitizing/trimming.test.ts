@@ -19,16 +19,18 @@ describe('trimArray', () => {
   });
 });
 
+// TODO: change test values
+
 describe('trimObjectLiteral', () => {
   it('should trim all string fields', () => {
     const actual = trimObjectLiteral({
-      name: '   Bundesbank ',
+      name: '   Bank ',
       id: 2,
       strasse: 'Bankstraße 42 ',
     });
 
     expect(actual).toEqual({
-      name: 'Bundesbank',
+      name: 'Bank',
       id: 2,
       strasse: 'Bankstraße 42',
     });
@@ -36,13 +38,13 @@ describe('trimObjectLiteral', () => {
 
   it('should create a new object', () => {
     const input = {
-      name: '   Bundesbank ',
+      name: '   Bank ',
     };
     const actual = trimObjectLiteral(input);
 
     // richtiger Inhalt
     expect(actual).toEqual({
-      name: 'Bundesbank',
+      name: 'Bank',
     });
     // aber neues Objekt
     expect(actual).not.toBe(input);
@@ -50,7 +52,7 @@ describe('trimObjectLiteral', () => {
 
   it('should work with nested objects', () => {
     const actual = trimObjectLiteral({
-      name: '   Bundesbank ',
+      name: '   Bank ',
       nested: {
         id: 2,
         strasse: 'Bankstraße 42 ',
@@ -58,7 +60,7 @@ describe('trimObjectLiteral', () => {
     });
 
     expect(actual).toEqual({
-      name: 'Bundesbank',
+      name: 'Bank',
       nested: {
         id: 2,
         strasse: 'Bankstraße 42',
@@ -68,7 +70,7 @@ describe('trimObjectLiteral', () => {
 
   it('should trim items in nested arrays', () => {
     const actual = trimObjectLiteral({
-      name: '   Bundesbank ',
+      name: '   Bank ',
       items: [
         0,
         1,
@@ -82,7 +84,7 @@ describe('trimObjectLiteral', () => {
     });
 
     expect(actual).toEqual({
-      name: 'Bundesbank',
+      name: 'Bank',
       items: [
         0,
         1,
@@ -100,7 +102,7 @@ describe('trimObjectLiteral', () => {
     const now = new Date();
 
     const actual = trimObjectLiteral({
-      name: '   Bundesbank ',
+      name: '   Bank ',
       nested: {
         strasse: 'Bankstraße 42 ',
       },
@@ -109,7 +111,7 @@ describe('trimObjectLiteral', () => {
     });
 
     expect(actual).toEqual({
-      name: 'Bundesbank',
+      name: 'Bank',
       nested: {
         strasse: 'Bankstraße 42',
       },
@@ -120,13 +122,13 @@ describe('trimObjectLiteral', () => {
 
   it('should work with null and undefined values', () => {
     const actual = trimObjectLiteral({
-      name: '   Bundesbank ',
+      name: '   Bank ',
       id: null,
       strasse: undefined,
     });
 
     expect(actual).toEqual({
-      name: 'Bundesbank',
+      name: 'Bank',
       id: null,
       strasse: undefined,
     });
@@ -134,11 +136,11 @@ describe('trimObjectLiteral', () => {
 
   it('should not trim keys', () => {
     const actual = trimObjectLiteral({
-      ' name': '   Bundesbank ',
+      ' name': '   Bank ',
     });
 
     expect(actual).toEqual({
-      ' name': 'Bundesbank',
+      ' name': 'Bank',
     });
   });
 

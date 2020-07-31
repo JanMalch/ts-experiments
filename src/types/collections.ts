@@ -25,6 +25,7 @@ export type ObjectEntries<T> = KeyValueTuple<string, T>[];
  * }
  * type FieldNameOfPersonWithStringValue = PickKeys<Person, string>;
  * // "name" | "id"
+* @author https://github.com/JanMalch/ts-experiments
  */
 export type PickKeys<T, V> = {
   [P in keyof T]: T[P] extends V ? P : never;
@@ -41,11 +42,13 @@ export type PickKeys<T, V> = {
  * }
  * type StringFieldsOfPerson = PickValues<Person, string>;
  * // { name: string, id: string }
+* @author https://github.com/JanMalch/ts-experiments
  */
 export type PickValues<T, V> = Pick<T, PickKeys<T, V>>;
 
 /**
  * Defines a type with the same keys as T, but different value types
+* @author https://github.com/JanMalch/ts-experiments
  */
 export type SameKeys<T, V> = Record<keyof T, V>;
 

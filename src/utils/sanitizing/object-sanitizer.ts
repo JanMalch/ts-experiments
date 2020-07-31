@@ -6,6 +6,7 @@ import { ObjectSanitizers, Sanitizer } from './types';
  * Eine Instanz wird einem `ObjectSanitizers` Objekt intialisiert und somit die Regeln definiert.
  * Anschließend können entsprechende Eingabeobjekt mit der `sanitize` Funktion sanitisiert werden.
  * @see Sanitizers.of
+* @author https://github.com/JanMalch/ts-experiments
  */
 export class ObjectSanitizer<I, O = I> {
   /**
