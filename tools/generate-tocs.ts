@@ -82,6 +82,9 @@ const countRegexOccurences = (regex: RegExp, content: string): number => {
 function countExports(fileOrDirectory: string): number {
   let count;
   if (fileOrDirectory.endsWith('.ts')) {
+    if (fileOrDirectory.endsWith('.test.ts')) {
+      return 0;
+    }
     count = countRegexOccurences(
       /export /g,
       fs.readFileSync(fileOrDirectory, 'utf8')
@@ -93,7 +96,8 @@ function countExports(fileOrDirectory: string): number {
       (acc, d) => acc + countExports(d),
       0
     );
-    const directFiles = glob.sync(`${fileOrDirectory}/*.ts`);
+    const directFiles = glob.sync(`${fileOrDirectory}/*.ts`)
+      .filter(c => !c.endsWith('.test.ts'));
     const countFromDirectFiles = directFiles.reduce((acc, file) => {
       const sum = countRegexOccurences(
         /export /g,
@@ -115,6 +119,7 @@ function processReadme(readme: string) {
   const directory = readme.slice(0, -10);
   const children = glob
     .sync(`${directory}/*{.ts,/}`)
+    .filter(c => !c.endsWith('.test.ts'))
     .map((c) => ({
       path: c,
       type: c.endsWith('/') ? 'tree' : ('blob' as 'tree' | 'blob'),

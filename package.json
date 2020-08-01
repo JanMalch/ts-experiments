@@ -50,14 +50,14 @@
       "ts"
     ],
     "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/test/"
+      "/node_modules/"
     ],
     "moduleNameMapper": {
       "@ts-experiments/(.*)": "<rootDir>/src/$1"
     },
     "collectCoverageFrom": [
-      "src/*.ts"
+      "src/**/*.ts",
+      "!src/**/*.test.ts"
     ]
   },
   "prettier": {
