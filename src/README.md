@@ -16,7 +16,7 @@ You are also welcome to make a PR for new additions and improvements.
 Make sure to checkout [the list below](#notable-libraries-and-links) for actually battle-tested libraries and helpful links.
 
 <!-- TOTAL:START -->
-[![138 exports](https://img.shields.io/badge/exports-138-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
+[![141 exports](https://img.shields.io/badge/exports-141-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
 ![Build, Test, Lint](https://github.com/JanMalch/ts-experiments/workflows/Build,%20Test,%20Lint/badge.svg)
 ![documentation: lacking](https://img.shields.io/badge/documentation-lacking-success)
 ![coverage: abysmal](https://img.shields.io/badge/coverage-abysmal-success)
@@ -31,7 +31,7 @@ Here you can find everything concerning collections:
 Classes like `Queue` and `Stack`, but mostly operations to simplify your work with collections:
 Create new collections based on other collections, reduce them to a certain value, or create type guards for them!
 
-[![40 exports](https://img.shields.io/badge/exports-40-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/)
+[![43 exports](https://img.shields.io/badge/exports-43-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/)
 
 ---
 
