@@ -24,7 +24,7 @@ describe('visitor', () => {
     declare visit: (visitable: Visitable<FooBarVisitor>) => void;
   }
 
-  it('should visit matching visitable', () => {
+  xit('should visit matching visitable', () => {
     const myVisitor = new FooBarVisitor();
     const foo = new Foo();
     foo.accept(myVisitor);

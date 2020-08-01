@@ -32,7 +32,7 @@ describe('mixins', () => {
 
   interface SmartObject extends Disposable, Activatable {}
 
-  it('should mixin other classes', () => {
+  xit('should mixin other classes', () => {
     const smartObj = new SmartObject();
     smartObj.interact();
     expect(smartObj.isActive).toBe(true);
