@@ -17,6 +17,9 @@ Make sure to checkout [the list below](#notable-libraries-and-links) for actuall
 
 <!-- TOTAL:START -->
 [![138 exports](https://img.shields.io/badge/exports-138-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
+![Build, Test, Lint](https://github.com/JanMalch/ts-experiments/workflows/Build,%20Test,%20Lint/badge.svg)
+![documentation: lacking](https://img.shields.io/badge/documentation-lacking-success)
+![coverage: abysmal](https://img.shields.io/badge/coverage-abysmal-success)
 <!-- TOTAL:END -->
 
 ## Contents
