@@ -4,6 +4,7 @@ export type BiConsumer<A, B = A> = (valueA: A, valueB: B) => void;
 export type Task = () => void;
 export type Mapper<T, O> = (value: T) => O;
 export type Predicate<T> = (value: T) => boolean;
+export type BiPredicate<T> = (a: T, b: T) => boolean;
 export type Operator<T> = (value: T) => T;
 export type TypeGuard<T> = (value: any) => value is T;
 /**

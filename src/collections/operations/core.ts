@@ -1,5 +1,7 @@
 export const identity = <T>(value: T): T => value;
 
+export const strictEqual = <T>(a: T, b: T): boolean => a === b;
+
 export function plus(a: number, b: number): number;
 export function plus(a: boolean, b: boolean): number;
 export function plus(a: string | unknown, b: unknown): string;
