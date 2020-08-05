@@ -1,11 +1,11 @@
+import { strictEqual } from '@ts-experiments/collections/operations/core';
+import { BiPredicate } from '@ts-experiments/types/functions';
+
 /**
  * Returns a new array with the shuffled items.
  * @param input
  * @author https://stackoverflow.com/a/12646864
  */
-import { strictEqual } from '@ts-experiments/collections/operations/core';
-import { BiPredicate } from '@ts-experiments/types/functions';
-
 export function shuffle<T>(input: T[]): T[] {
   const array = input.slice(0);
   for (let i = array.length - 1; i > 0; i--) {
