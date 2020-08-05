@@ -50,6 +50,7 @@ These files contain function that are used as the first argument for [`Array#red
 ### [typed-object-methods](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/typed-object-methods.ts)
 
 typed versions of Object.entries, Object.keys and Object.values
+See also [why TS doesn't do it this way](https://github.com/Microsoft/TypeScript/issues/12870#issuecomment-266637861).
 
 [![3 exports](https://img.shields.io/badge/exports-3-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/typed-object-methods.ts)
 <!-- TOC:END -->
