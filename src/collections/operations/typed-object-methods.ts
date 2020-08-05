@@ -1,5 +1,5 @@
 /*
- * typed versions of Object.entries, Object.keys and Object.values
+ * Typed versions of `Object.entries`, `Object.keys` and `Object.values`.
  * See also [why TS doesn't do it this way](https://github.com/Microsoft/TypeScript/issues/12870#issuecomment-266637861).
  */
 
