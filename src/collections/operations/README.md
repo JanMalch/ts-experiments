@@ -9,6 +9,7 @@ These files contain function that create new collections or values based on othe
 ## Contents
 
 <!-- TOC:START -->
+
 ### [arrays](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/arrays.ts)
 
 [![3 exports](https://img.shields.io/badge/exports-3-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/arrays.ts)
@@ -52,4 +53,5 @@ These files contain function that are used as the first argument for [`Array#red
 typed versions of Object.entries, Object.keys and Object.values
 
 [![3 exports](https://img.shields.io/badge/exports-3-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/typed-object-methods.ts)
+
 <!-- TOC:END -->

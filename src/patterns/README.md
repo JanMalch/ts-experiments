@@ -9,6 +9,7 @@ Various utilties that simplify patterns.
 ## Contents
 
 <!-- TOC:START -->
+
 ### [chain-of-responsibility](https://github.com/JanMalch/ts-experiments/blob/master/src/patterns/chain-of-responsibility.ts)
 
 [![3 exports](https://img.shields.io/badge/exports-3-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/patterns/chain-of-responsibility.ts)
@@ -54,4 +55,5 @@ Various utilties that simplify patterns.
 ### [visitor](https://github.com/JanMalch/ts-experiments/blob/master/src/patterns/visitor.ts)
 
 [![4 exports](https://img.shields.io/badge/exports-4-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/patterns/visitor.ts)
+
 <!-- TOC:END -->

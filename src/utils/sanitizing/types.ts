@@ -2,7 +2,7 @@ import { ValuesOf } from '@ts-experiments/types/collections';
 
 /**
  * Semantischer Typ-Alias, für eine Funktion die einen input vom Typ `I` annimmt, und in den Typ `O` umwandelt.
-* @author https://github.com/JanMalch/ts-experiments
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export type Sanitizer<I = any, O = I> = (input: I) => O;
 
@@ -10,7 +10,7 @@ export type Sanitizer<I = any, O = I> = (input: I) => O;
  * Typ-Alias für ein Objekt, welches optionale Sanitisierer für einen anderen Typ `T`  definiert.
  * Sie definieren die Regeln nach denen ein Objekt später sanitisiert wird.
  * @see Sanitizers.of
-* @author https://github.com/JanMalch/ts-experiments
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export type ObjectSanitizers<T, O = T> = {
   [key in keyof (Partial<T> | Partial<O>)]: Sanitizer<T[key], O[key]>;

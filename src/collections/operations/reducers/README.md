@@ -18,6 +18,7 @@ expect(odd).toEqual([1, 3, 5]);
 ## Contents
 
 <!-- TOC:START -->
+
 ### [arrays](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/reducers/arrays.ts)
 
 [![1 export](https://img.shields.io/badge/exports-1-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/reducers/arrays.ts)
@@ -39,4 +40,5 @@ expect(odd).toEqual([1, 3, 5]);
 ### [util](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/reducers/util.ts)
 
 [![1 export](https://img.shields.io/badge/exports-1-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/reducers/util.ts)
+
 <!-- TOC:END -->

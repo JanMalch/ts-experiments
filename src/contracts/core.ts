@@ -125,7 +125,7 @@ export class Contract {
  * @example
  * const result = foo ? 'a' : error('Something went wrong!');
  * const nestedValue = bar?.a?.b?.c ?? error('Nested value is null!');
-* @author https://github.com/JanMalch/ts-experiments
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export function error<T>(
   message: string,

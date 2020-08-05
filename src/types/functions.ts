@@ -12,7 +12,7 @@ export type TypeGuard<T> = (value: any) => value is T;
  * @typeparam A the type of the accumulator
  * @typeparam T the type of the current item
  * @see reduce
-* @author https://github.com/JanMalch/ts-experiments
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export type Reducer<A, T> = (
   accumulator: A,
@@ -26,7 +26,7 @@ export type BiMapper<A, B, O> = (valueA: A, valueB: B) => O;
 
 /**
  * Type alias for a function that compares two values for sorting purposes
-* @author https://github.com/JanMalch/ts-experiments
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export type Comparator<T> = (a: T, b: T) => number;
 
@@ -45,7 +45,7 @@ export type ObjectMapper<
  * VIA stands for Value-Index-Array.
  * @typeparam I the type of the values
  * @typeparam O the type of the return type
-* @author https://github.com/JanMalch/ts-experiments
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export type VIAFn<I, O> = (
   currentValue: I,

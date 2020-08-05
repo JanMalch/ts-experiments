@@ -12,7 +12,7 @@ import { isObjectLiteral } from '@ts-experiments/collections/operations/guards';
  * @see trimArray
  * @see trimObjectLiteral
  * @see trimObject
-* @author https://github.com/JanMalch/ts-experiments
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export function trimValue<T>(value: T): T {
   if (value == null) {
@@ -36,7 +36,7 @@ export function trimValue<T>(value: T): T {
  * Ist der Wert kein Array wird er unverändert zurückgegeben.
  * @param value beliebiges Array
  * @see trimValue
-* @author https://github.com/JanMalch/ts-experiments
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export function trimArray<T>(value: T[]): T[] {
   if (!Array.isArray(value)) {
@@ -53,7 +53,7 @@ export function trimArray<T>(value: T[]): T[] {
  * Ist der Wert kein Objekliteral wird er unverändert zurückgegeben.
  * @param value beliebiges Objektliteral
  * @see trimValue
-* @author https://github.com/JanMalch/ts-experiments
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export function trimObjectLiteral<T extends any>(value: T): T {
   if (!isObjectLiteral(value)) {
@@ -83,7 +83,7 @@ export function trimObjectLiteral<T extends any>(value: T): T {
  * @see trimObjectLiteral
  * @see trimValue
  * @returns dasselbe Objekt mit getrimmten Feldern (referential equality)
-* @author https://github.com/JanMalch/ts-experiments
+ * @author https://github.com/JanMalch/ts-experiments
  */
 export function trimObject<T>(value: T): T {
   const asObjectLiteral = { ...value };

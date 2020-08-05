@@ -27,10 +27,7 @@ export function LogCalls(label?: string) {
       const preservedResult = JSON.stringify(result);
       console.groupCollapsed(_label + ' => ' + preservedResult);
       logCallsLog('args (reference)', args);
-      logCallsLog(
-        'args (preserved)',
-        preservedArgs
-      );
+      logCallsLog('args (preserved)', preservedArgs);
       logCallsLog('result (reference)', result);
       logCallsLog('result (preserved)', preservedResult);
       logCallsLog('duration in ms', end - start);

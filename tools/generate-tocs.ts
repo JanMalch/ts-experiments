@@ -90,14 +90,16 @@ function countExports(fileOrDirectory: string): number {
       fs.readFileSync(fileOrDirectory, 'utf8')
     );
   } else {
-    const isFirstLevelDir = fileOrDirectory.indexOf('/', 5) === fileOrDirectory.length - 1;
+    const isFirstLevelDir =
+      fileOrDirectory.indexOf('/', 5) === fileOrDirectory.length - 1;
     const directories = glob.sync(`${fileOrDirectory}/*/`);
     const countFromNestedDirs = directories.reduce(
       (acc, d) => acc + countExports(d),
       0
     );
-    const directFiles = glob.sync(`${fileOrDirectory}/*.ts`)
-      .filter(c => !c.endsWith('.test.ts'));
+    const directFiles = glob
+      .sync(`${fileOrDirectory}/*.ts`)
+      .filter((c) => !c.endsWith('.test.ts'));
     const countFromDirectFiles = directFiles.reduce((acc, file) => {
       const sum = countRegexOccurences(
         /export /g,
@@ -119,7 +121,7 @@ function processReadme(readme: string) {
   const directory = readme.slice(0, -10);
   const children = glob
     .sync(`${directory}/*{.ts,/}`)
-    .filter(c => !c.endsWith('.test.ts'))
+    .filter((c) => !c.endsWith('.test.ts'))
     .map((c) => ({
       path: c,
       type: c.endsWith('/') ? 'tree' : ('blob' as 'tree' | 'blob'),
@@ -168,5 +170,5 @@ function persistTotalCount() {
 
 fs.copyFileSync('./README.md', './src/README.md');
 glob.sync('src/**/README.md').forEach(processReadme);
-persistTotalCount()
+persistTotalCount();
 fs.copyFileSync('./src/README.md', './README.md');
