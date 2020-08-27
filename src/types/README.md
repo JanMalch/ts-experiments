@@ -11,7 +11,7 @@ All kinds of types, that help you create new types.
 <!-- TOC:START -->
 ### [collections](https://github.com/JanMalch/ts-experiments/blob/master/src/types/collections.ts)
 
-[![15 exports](https://img.shields.io/badge/exports-15-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/types/collections.ts)
+[![16 exports](https://img.shields.io/badge/exports-16-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/types/collections.ts)
 
 ---
 

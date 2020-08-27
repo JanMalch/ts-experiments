@@ -16,7 +16,7 @@ You are also welcome to make a PR for new additions and improvements.
 Make sure to checkout [the list below](#notable-libraries-and-links) for actually battle-tested libraries and helpful links.
 
 <!-- TOTAL:START -->
-[![144 exports](https://img.shields.io/badge/exports-144-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
+[![145 exports](https://img.shields.io/badge/exports-145-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
 ![Build, Test, Lint](https://github.com/JanMalch/ts-experiments/workflows/Build,%20Test,%20Lint/badge.svg)
 ![documentation: lacking](https://img.shields.io/badge/documentation-lacking-success)
 ![coverage: abysmal](https://img.shields.io/badge/coverage-abysmal-success)
@@ -71,7 +71,7 @@ RFC 7807 utils
 
 All kinds of types, that help you create new types.
 
-[![53 exports](https://img.shields.io/badge/exports-53-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/types/)
+[![54 exports](https://img.shields.io/badge/exports-54-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/types/)
 
 ---
 
