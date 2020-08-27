@@ -56,6 +56,12 @@ export type KeyOf<T> = keyof T;
 export type KeysOf<T> = Array<keyof T>;
 export type ValuesOf<T> = T[keyof T];
 
+/**
+ * Defines a type with all the keys `K` removed from `T`.
+ * @author https://stackoverflow.com/a/50918777
+ */
+export type Without<T, K> = Pick<T, Exclude<keyof T, K>>;
+
 export interface KeyValue<K, V> {
   key: K;
   value: V;
