@@ -3,7 +3,7 @@ import {
   isNumber,
   recordKeysGuard,
   recordValuesGuard,
-} from '@ts-experiments/collections/operations/guards';
+} from '@ts-experiments/types/guards';
 
 describe('guard factories', () => {
   describe('arrayGuard', () => {

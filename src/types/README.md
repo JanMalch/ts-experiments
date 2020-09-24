@@ -2,7 +2,7 @@
 
 <!-- SUMMARY:START -->
 
-All kinds of types, that help you create new types.
+Here you can find common types, generic types and type guards.
 
 <!-- SUMMARY:END -->
 
@@ -26,6 +26,3 @@ All kinds of types, that help you create new types.
 [![18 exports](https://img.shields.io/badge/exports-18-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/types/misc.ts)
 <!-- TOC:END -->
 
-## Notes
-
-recommend using type-fest. not using here for ez copy

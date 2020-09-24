@@ -4,7 +4,8 @@
 
 Here you can find everything concerning collections:
 Classes like `Queue` and `Stack`, but mostly operations to simplify your work with collections:
-Create new collections based on other collections, reduce them to a certain value, or create type guards for them!
+Create new collections based on other collections or reduce them to a certain value.
+[Special type guards are in the "types" section.](https://github.com/JanMalch/ts-experiments/blob/master/src/types/guards.ts#L43-L72)
 
 <!-- SUMMARY:END -->
 

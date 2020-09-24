@@ -1,4 +1,4 @@
-import { isObjectLiteral } from '@ts-experiments/collections/operations/guards';
+import { isObjectLiteral } from '@ts-experiments/types/guards';
 
 /**
  * Trimmt jeden beliebigen Typ.

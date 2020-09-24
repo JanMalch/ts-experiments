@@ -6,7 +6,7 @@
  */
 
 import { identity } from '@ts-experiments/collections/operations/core';
-import { isObjectLiteral } from '@ts-experiments/collections/operations/guards';
+import { isObjectLiteral } from '@ts-experiments/types/guards';
 import { Consumer } from '@ts-experiments/types/functions';
 
 export type Setter<T, K extends keyof T = keyof T> = (value: any) => T[K];

@@ -1,4 +1,4 @@
-import { isInstanceOf } from '@ts-experiments/collections/operations/guards';
+import { isInstanceOf } from '@ts-experiments/types/guards';
 import { Visitable, Visitor, VisitIf } from '@ts-experiments/patterns/visitor';
 
 describe('visitor', () => {
