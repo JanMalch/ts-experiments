@@ -33,12 +33,6 @@ These files contain function that create new collections or values based on othe
 
 ---
 
-### [guards](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/guards.ts)
-
-[![11 exports](https://img.shields.io/badge/exports-11-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/guards.ts)
-
----
-
 ### [reducers](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/operations/reducers/)
 
 These files contain function that are used as the first argument for [`Array#reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)

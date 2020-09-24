@@ -29,9 +29,10 @@ Make sure to checkout [the list below](#notable-libraries-and-links) for actuall
 
 Here you can find everything concerning collections:
 Classes like `Queue` and `Stack`, but mostly operations to simplify your work with collections:
-Create new collections based on other collections, reduce them to a certain value, or create type guards for them!
+Create new collections based on other collections or reduce them to a certain value.
+[Special type guards are in the "types" section.](https://github.com/JanMalch/ts-experiments/blob/master/src/types/guards.ts#L43-L72)
 
-[![45 exports](https://img.shields.io/badge/exports-45-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/)
+[![34 exports](https://img.shields.io/badge/exports-34-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/)
 
 ---
 
@@ -69,9 +70,9 @@ RFC 7807 utils
 
 ### [types](https://github.com/JanMalch/ts-experiments/tree/master/src/types/)
 
-All kinds of types, that help you create new types.
+Here you can find common types, generic types and type guards.
 
-[![54 exports](https://img.shields.io/badge/exports-54-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/types/)
+[![65 exports](https://img.shields.io/badge/exports-65-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/types/)
 
 ---
 

@@ -24,5 +24,5 @@ Classes that represent certain types of collections.
 
 These files contain function that create new collections or values based on other collections.
 
-[![43 exports](https://img.shields.io/badge/exports-43-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/operations/)
+[![32 exports](https://img.shields.io/badge/exports-32-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/operations/)
 <!-- TOC:END -->
