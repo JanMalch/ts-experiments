@@ -84,7 +84,8 @@ This and that
 
 ## Notable libraries and links
 
-- [comparing](https://github.com/JanMalch/comparing)
-- [fp-ts](https://github.com/gcanti/fp-ts)
-- [lodash](https://github.com/lodash/lodash)
+- [comparing](https://www.npmjs.com/package/comparing)
+- [fp-ts](http://npmjs.com/package/fp-ts) and [io-ts](http://npmjs.com/package/io-ts)
+- [type-fest](https://www.npmjs.com/package/type-fest)
+- [lodash](https://www.npmjs.com/package/lodash)
 - [Typescript Decorators Examples](https://github.com/arolson101/typescript-decorators#readme)
