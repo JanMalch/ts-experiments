@@ -15,15 +15,18 @@ You are also welcome to make a PR for new additions and improvements.
 Make sure to checkout [the list below](#notable-libraries-and-links) for actually battle-tested libraries and helpful links.
 
 <!-- TOTAL:START -->
-[![145 exports](https://img.shields.io/badge/exports-145-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
+
+[![148 exports](https://img.shields.io/badge/exports-148-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
 ![Build, Test, Lint](https://github.com/JanMalch/ts-experiments/workflows/Build,%20Test,%20Lint/badge.svg)
 ![documentation: lacking](https://img.shields.io/badge/documentation-lacking-success)
 ![coverage: abysmal](https://img.shields.io/badge/coverage-abysmal-success)
+
 <!-- TOTAL:END -->
 
 ## Contents
 
 <!-- TOC:START -->
+
 ### [collections](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/)
 
 Here you can find everything concerning collections:
@@ -61,9 +64,9 @@ Various utilties that simplify patterns.
 
 ### [problems](https://github.com/JanMalch/ts-experiments/tree/master/src/problems/)
 
-RFC 7807 utils
+[RFC 7807](https://tools.ietf.org/html/rfc7807) utilities. Documentation is in part copied from this very RFC.
 
-[![0 exports](https://img.shields.io/badge/exports-0-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/problems/)
+[![3 exports](https://img.shields.io/badge/exports-3-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/problems/)
 
 ---
 
@@ -80,6 +83,7 @@ Here you can find common types, generic types and type guards.
 This and that
 
 [![15 exports](https://img.shields.io/badge/exports-15-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/utils/)
+
 <!-- TOC:END -->
 
 ## Notable libraries and links
