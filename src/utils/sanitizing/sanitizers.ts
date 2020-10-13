@@ -4,29 +4,28 @@ import { ObjectSanitizer } from './object-sanitizer';
 import { ObjectSanitizers, Sanitizer, SanitizerHooks } from './types';
 
 /**
- * Bietet einen Satz von vorgefertigen Sanitizer-Funktionen, oder Funktionen um solche zu erzeugen.
+ * Provides sanitizer functions or factories to create new ones.
  */
 export class Sanitizers {
-  // TODO: deutsch
   /**
    * Symbol to mark a field for removal later on.
    * @see Sanitizers.removeIf
    */
   public static readonly MARKED_FOR_REMOVAL = Symbol(
-    'Sanitizers.MARKED_FOR_REMOVAL'
+    'Sanitizers.MARKED_FOR_REMOVAL',
   );
 
   /**
-   * Sanitisierer, der den Wert unmittelbar zurückgibt.
+   * Function that will return the value unchanged.
    */
   public static unchanged: Sanitizer = (i) => i;
 
   /**
-   * Sanitisierer, der den Wert ggf. mit MARKED_FOR_REMOVAL überschreibt.
-   * Solche Werte werden später im `ObjectSanitizer` vollständig entfernt.
+   * Function that will change a value to `MARKED_FOR_REMOVAL`.
+   * Such values will be removed in the `ObjectSanitizer`.
    */
   public static removeIf<I>(
-    removeValue: I | Predicate<I>
+    removeValue: I | Predicate<I>,
   ): Sanitizer<I, I | typeof Sanitizers.MARKED_FOR_REMOVAL> {
     const predicate = (typeof removeValue === 'function'
       ? removeValue
@@ -36,26 +35,22 @@ export class Sanitizers {
   }
 
   /**
-   * Sanitisierer, der alle Werte außer `true` zu `false` wandelt.
-   * Dies wird mit der strict equalit `===` bewerkstelligt.
+   * Function that turns all value that are not strictly `true` into `false`.
    */
   public static strictBinary: Sanitizer<any, boolean> = (i) => i === true;
 
   /**
-   * Sanitisierer, der die allgemeine Boolean-Konvertierung von JavaScript anwendet.
-   * Dies wird mit dem not-Operator (`!!`) bewerkstelligt.
+   * Function that turns all values into booleans with the lenient conversion.
    */
   public static binary: Sanitizer<any, boolean> = (i) => !!i;
 
   /**
-   * Erzeugt eine Sanitizer-Funktion, die `null` zurückgibt, falls der Eingabewert `null` ist,
-   * oder der gegegben `nullValue` entspricht.
-   * Anstelle von Werten kann eine Prädikatsfunktion verwendet werden. Wenn diese `true` zurückgibt, wird `null` verwendet.
-   * @param nullValue Wert der durch `null` ersetzt werden sollen, oder eine Prädikatsfunktion
+   * Creates a function that will return `null` if the argument is `null` or matches the given `nullValue`.
+   * A predicate can also be used, that must match to return `null`.
    * @see Sanitizers.toNullIfOneOf
    */
   public static toNullIf<I>(
-    nullValue: I | Predicate<I>
+    nullValue: I | Predicate<I>,
   ): Sanitizer<I, I | null> {
     const predicate = (typeof nullValue === 'function'
       ? nullValue
@@ -64,9 +59,7 @@ export class Sanitizers {
   }
 
   /**
-   * Erzeugt eine Sanitizer-Funktion, die null zurückgibt, falls der Eingabewert null ist,
-   * oder einer der gegegben `nullValues` entspricht.
-   * @param nullValues Mögliche Werte die durch null ersetzt werden sollen
+   * Creates a function that will return `null` if the received value matches one of the given `nullValues`.
    */
   public static toNullIfOneOf<I>(...nullValues: I[]): Sanitizer<I, I | null> {
     return (value: I) =>
@@ -74,10 +67,8 @@ export class Sanitizers {
   }
 
   /**
-   * Text-Sanitisierer, der einen string annimmt, trim() aufruft und anschließend gegen einen leeren String prüft.
+   * Function that will return `null`, if the received string is blank.
    */
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
   public static text: Sanitizer<string, string | null> = (value: string) => {
     if (typeof value !== 'string') {
       return null;
@@ -86,11 +77,11 @@ export class Sanitizers {
   };
 
   /**
-   * Sanitisierer, der aus Text in eine Zahl umwandelt, mithilfe von `parseInt(x, 10)`.
-   * Zahlen bleiben unverändert. Für nicht parsebare inputs wird `null` zurückgegeben.
+   * Function that will parse a string to an integer (radix 10).
+   * If the result is not a number, `null` will be returned.
    */
   public static toInt: Sanitizer<string | number, number | null> = (
-    value: string | number
+    value: string | number,
   ) => {
     if (typeof value === 'string' && Sanitizers.text(value) == null) {
       return null;
@@ -102,11 +93,11 @@ export class Sanitizers {
   };
 
   /**
-   * Sanitisierer, der aus Text in eine Zahl umwandelt, mithilfe von `parseFloat(x)`.
-   * Zahlen bleiben unverändert. Für nicht parsebare inputs wird `null` zurückgegeben.
+   * Function that will parse a string to a float.
+   * If the result is not a number, `null` will be returned.
    */
   public static toFloat: Sanitizer<string | number, number | null> = (
-    value: string | number
+    value: string | number,
   ) => {
     if (typeof value === 'string' && Sanitizers.text(value) == null) {
       return null;
@@ -118,52 +109,40 @@ export class Sanitizers {
   };
 
   /**
-   * Erzeugt eine Sanitizer-Funktion, die den gegebenen Wert `useValue` zurückgibt, falls der Eingabewert `null` ist.
-   * @param useValue Wert der anstelle von `null` genutzt werden soll
+   * Creates a function that will return the given `useValue` if the received value is `null`.
    */
   public static ifNullTo<I>(useValue: I): Sanitizer<I | null, I> {
     return (value: I | null) => (value == null ? useValue : value);
   }
 
   /**
-   * Erzeugt eine neue Sanitizer-Funktion, die gegebenen Sanitizer-Funktionen verkettet und nacheinander aufruft,
-   * mit dem Ergebnis des jeweils vorherigen.
-   * @param sanitizers Sanitizer-Funktionen die verkettet werden
-   * @see Sanitizers.toNullIfOneOf
+   * Creates a function that will concatenate the given functions and pass the result from one to the next.
    */
   public static compose(sanitizers: Sanitizer[]): Sanitizer {
     return (value: any) =>
       sanitizers.reduce(
         (prevValue: any, sanFn: Sanitizer) => sanFn(prevValue),
-        value
+        value,
       );
   }
 
   /**
-   * Erzeugt eine neue Instanz eines `ObjectSanitizer`, der ein gesamtes Objekt vom Typ `I` (erster generic type) sanitisieren kann.
-   * Für jedes Feld des Objekts kann eine Sanitizer-Funktion definiert werden. Neue Felder können nicht definiert werden.
-   * @param sanitizers Objekt, das Sanitizer-Funktionen definiert
-   * @usageNotes
-
-   ```typescript
-   interface MyForm {
-  name: string;
-  id: number | null;
-}
-
-   const formSanitizer = Sanitizers.of<MyForm>({
-  id: Sanitizers.toNullIf(0)
-});
-
-   const formValue: MyForm = {
-    name: "Jan",
-    id: 0
-};
-
-   const result = formSanitizer.sanitize(formValue);
-   // result.name === "Jan"
-   // result.id === null
-   ```
+   * Creates a new `ObjectSanitizer` that can sanitize an object of type `I`.
+   * @example
+   * interface MyForm {
+   *   name: string;
+   *   id: number | null;
+   * }
+   * const formSanitizer = Sanitizers.of<MyForm>({
+   *   id: Sanitizers.toNullIf(0)
+   * });
+   * const formValue: MyForm = {
+   *   name: "Jan",
+   *   id: 0
+   * };
+   * const result = formSanitizer.sanitize(formValue);
+   * // result.name === "Jan"
+   * // result.id === null
    */
   public static of<I, O = I>(
     sanitizers: ObjectSanitizers<I, O>

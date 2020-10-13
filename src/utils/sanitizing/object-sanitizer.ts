@@ -2,22 +2,13 @@ import { Sanitizers } from './sanitizers';
 import { ObjectSanitizers, Sanitizer } from './types';
 
 /**
- * Instanzen eines `ObjectSanitizer` sanitisieren einen bestimmten Objekt-Typ.
- * Eine Instanz wird einem `ObjectSanitizers` Objekt intialisiert und somit die Regeln definiert.
- * Anschließend können entsprechende Eingabeobjekt mit der `sanitize` Funktion sanitisiert werden.
+ * A `ObjectSanitizer` sanitizes a certain object type `I`.
  * @see Sanitizers.of
  */
 export class ObjectSanitizer<I, O = I> {
-  /**
-   * Erzeugt eine neue Instanz.
-   * @param formSanitizers `ObjectSanitizers` Objekt, welches die Regeln definiert.
-   */
+
   constructor(private readonly formSanitizers: ObjectSanitizers<I, O>) {}
 
-  /**
-   * Sanitisiert das Eingabeobjekt mit den, durch die Instanz definierten, `ObjectSanitizers`.
-   * @param formValue das Eingabeobjekt
-   */
   public sanitize(formValue: I): O {
     return Object.entries(formValue)
       .map(([key, value]) => {

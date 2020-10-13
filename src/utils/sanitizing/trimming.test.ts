@@ -13,8 +13,8 @@ describe('trimArray', () => {
   it('should throw an error for non-array types', () => {
     const input = [false, ' a string   ', 23, new Date(), { a: '  value ' }];
     input.forEach((nonArrayInput) => {
-      const actual = trimArray(nonArrayInput as any); // TypeScript beschwert sich schon, daher any-cast ...
-      expect(actual).toEqual(nonArrayInput as any); // unverändert
+      const actual = trimArray(nonArrayInput as any);
+      expect(actual).toEqual(nonArrayInput as any);
     });
   });
 });

@@ -1,14 +1,14 @@
 import { isObjectLiteral } from '@ts-experiments/types/guards';
 
 /**
- * Trimmt jeden beliebigen Typ.
- * - `null` oder `undefined` wird unverändert zurückgegeben
- * - `string` wird getrimmt
- * - in `Array`s wird für jeden Wert diese Methode aufgerufen
- * - für Objektliterale wird `trimObjectLiteral` aufgerufen
- * - für andere Objekte wird `trimObject` aufgerufen
- * - in allen anderen Fällen wird der Wert unverändert zurückgegeben
- * @param value beliebiger Wert
+ * Trims any kind of type.
+ * - `null` or `undefined` will be unchanged
+ * - `string`s are trimmed
+ * - `Array`s are mapped with `trimValue`
+ * - object literals are called with `trimObjectLiteral`
+ * - for other objects `trimObject`
+ * - in any other case unchanged
+ * @param value any value
  * @see trimArray
  * @see trimObjectLiteral
  * @see trimObject
@@ -30,10 +30,7 @@ export function trimValue<T>(value: T): T {
 }
 
 /**
- * Trimmt alle Werte in einem Array mithilfe der `trimValue` Funktion.
- *
- * Ist der Wert kein Array wird er unverändert zurückgegeben.
- * @param value beliebiges Array
+ * Trims all values in the given array with `trimValue`.
  * @see trimValue
  */
 export function trimArray<T>(value: T[]): T[] {
@@ -44,12 +41,8 @@ export function trimArray<T>(value: T[]): T[] {
 }
 
 /**
- * Trimmt alle Felder eines einfachen Objekts mithilfe der `trimValue` Funktion.
- * Verschachelte Objekte werden ebenfalls unterstützt.
- * Die Feldernamen bleiben unverändert.
- *
- * Ist der Wert kein Objekliteral wird er unverändert zurückgegeben.
- * @param value beliebiges Objektliteral
+ * Trims all values of an object with `trimValue`.
+ * Returns a new object.
  * @see trimValue
  */
 export function trimObjectLiteral<T extends any>(value: T): T {
@@ -72,14 +65,9 @@ export function trimObjectLiteral<T extends any>(value: T): T {
 }
 
 /**
- * Trimmt alle Felder eines Objekts mithilfe der `trimValue` Funktion.
- * Eine Kopie (in Form eines Objektliterals) aller Felder wird mit `trimObjectLiteral` getrimmt.
- * Anschließend werden die Werte wieder auf das Objekt kopiert.
- * Es wird dasselbe Objekt zurückgegeben, wie hineingegeben wurde.
- * @param value beliebiges Objekt
+ * Trims all fields of an object with `trimValue`. Returns the same object
  * @see trimObjectLiteral
  * @see trimValue
- * @returns dasselbe Objekt mit getrimmten Feldern (referential equality)
  */
 export function trimObject<T>(value: T): T {
   const asObjectLiteral = { ...value };
