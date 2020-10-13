@@ -17,7 +17,7 @@ export function hasFunction<
 >(value: T, key: K): value is T & Record<K, F> {
   return (
     value != null &&
-    value.hasOwnProperty(key) &&
+    Object.prototype.hasOwnProperty.call(value, key) &&
     isFunction<F>((value as any)[key])
   );
 }
@@ -67,6 +67,6 @@ export function recordKeysGuard<K extends keyof any, T = any>(
     if (data == null || typeof data !== 'object') {
       return false;
     }
-    return keys.every((key) => data.hasOwnProperty(key));
+    return keys.every((key) => Object.prototype.hasOwnProperty.call(data, key));
   };
 }

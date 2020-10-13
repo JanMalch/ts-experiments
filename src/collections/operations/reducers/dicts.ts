@@ -23,7 +23,7 @@ export function groupBy<T>(
     array: T[]
   ) => {
     const key = keySelector(currentItem, currentIndex, array);
-    if (accumulator.hasOwnProperty(key)) {
+    if (Object.prototype.hasOwnProperty.call(accumulator, key)) {
       accumulator[key].push(currentItem);
     } else {
       accumulator[key] = [currentItem];

@@ -9,6 +9,7 @@ These files contain function that create new collections or values based on othe
 ## Contents
 
 <!-- TOC:START -->
+
 ### [arrays](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/arrays.ts)
 
 [![4 exports](https://img.shields.io/badge/exports-4-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/arrays.ts)
@@ -47,4 +48,5 @@ Typed versions of `Object.entries`, `Object.keys` and `Object.values`.
 See also [why TS doesn't do it this way](https://github.com/Microsoft/TypeScript/issues/12870#issuecomment-266637861).
 
 [![3 exports](https://img.shields.io/badge/exports-3-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/collections/operations/typed-object-methods.ts)
+
 <!-- TOC:END -->

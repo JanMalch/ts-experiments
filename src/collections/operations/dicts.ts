@@ -8,12 +8,12 @@ export function invert<T extends Record<string, unknown>>(
 }
 
 export function invertGroup<T>(
-  value: Record<any, T[]>
+  value: Record<keyof any, T[]>
 ): { [key: string]: keyof T } {
   return Object.keys(value).reduce((acc, key) => {
-    const values = value[key];
+    const values = value[key] as any[];
     values.forEach((v) => {
-      if (!acc.hasOwnProperty(v)) {
+      if (!Object.prototype.hasOwnProperty.call(acc, v)) {
         acc[v] = [];
       }
       acc[v].push(key);
