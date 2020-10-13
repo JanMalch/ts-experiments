@@ -12,7 +12,7 @@ export class Sanitizers {
    * @see Sanitizers.removeIf
    */
   public static readonly MARKED_FOR_REMOVAL = Symbol(
-    'Sanitizers.MARKED_FOR_REMOVAL',
+    'Sanitizers.MARKED_FOR_REMOVAL'
   );
 
   /**
@@ -25,7 +25,7 @@ export class Sanitizers {
    * Such values will be removed in the `ObjectSanitizer`.
    */
   public static removeIf<I>(
-    removeValue: I | Predicate<I>,
+    removeValue: I | Predicate<I>
   ): Sanitizer<I, I | typeof Sanitizers.MARKED_FOR_REMOVAL> {
     const predicate = (typeof removeValue === 'function'
       ? removeValue
@@ -50,7 +50,7 @@ export class Sanitizers {
    * @see Sanitizers.toNullIfOneOf
    */
   public static toNullIf<I>(
-    nullValue: I | Predicate<I>,
+    nullValue: I | Predicate<I>
   ): Sanitizer<I, I | null> {
     const predicate = (typeof nullValue === 'function'
       ? nullValue
@@ -81,7 +81,7 @@ export class Sanitizers {
    * If the result is not a number, `null` will be returned.
    */
   public static toInt: Sanitizer<string | number, number | null> = (
-    value: string | number,
+    value: string | number
   ) => {
     if (typeof value === 'string' && Sanitizers.text(value) == null) {
       return null;
@@ -97,7 +97,7 @@ export class Sanitizers {
    * If the result is not a number, `null` will be returned.
    */
   public static toFloat: Sanitizer<string | number, number | null> = (
-    value: string | number,
+    value: string | number
   ) => {
     if (typeof value === 'string' && Sanitizers.text(value) == null) {
       return null;
@@ -122,7 +122,7 @@ export class Sanitizers {
     return (value: any) =>
       sanitizers.reduce(
         (prevValue: any, sanFn: Sanitizer) => sanFn(prevValue),
-        value,
+        value
       );
   }
 

@@ -6,7 +6,6 @@ import { ObjectSanitizers, Sanitizer } from './types';
  * @see Sanitizers.of
  */
 export class ObjectSanitizer<I, O = I> {
-
   constructor(private readonly formSanitizers: ObjectSanitizers<I, O>) {}
 
   public sanitize(formValue: I): O {
