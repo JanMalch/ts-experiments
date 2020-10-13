@@ -10,24 +10,20 @@ Take everything you see here with a grain of salt. This is more or less a dump o
 I do not claim that all these functions, types and classes have good and correct naming, well done tests or follow good practices, etc.
 If no caveats are mentioned, then that doesn't neccessarly mean there aren't any.
 
-That being said: feel free to be inspired and copy any bit of code you can find in this repository.
-It would be nice if you add an `@author` doc tag that points to this repository.
+That being said: feel free to be inspired and copy any bit of code you can find in this repository. Credit is appreciated.
 You are also welcome to make a PR for new additions and improvements.
 Make sure to checkout [the list below](#notable-libraries-and-links) for actually battle-tested libraries and helpful links.
 
 <!-- TOTAL:START -->
-
 [![145 exports](https://img.shields.io/badge/exports-145-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
 ![Build, Test, Lint](https://github.com/JanMalch/ts-experiments/workflows/Build,%20Test,%20Lint/badge.svg)
 ![documentation: lacking](https://img.shields.io/badge/documentation-lacking-success)
 ![coverage: abysmal](https://img.shields.io/badge/coverage-abysmal-success)
-
 <!-- TOTAL:END -->
 
 ## Contents
 
 <!-- TOC:START -->
-
 ### [collections](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/)
 
 Here you can find everything concerning collections:
@@ -84,7 +80,6 @@ Here you can find common types, generic types and type guards.
 This and that
 
 [![15 exports](https://img.shields.io/badge/exports-15-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/utils/)
-
 <!-- TOC:END -->
 
 ## Notable libraries and links

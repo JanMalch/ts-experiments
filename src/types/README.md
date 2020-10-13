@@ -9,7 +9,6 @@ Here you can find common types, generic types and type guards.
 ## Contents
 
 <!-- TOC:START -->
-
 ### [collections](https://github.com/JanMalch/ts-experiments/blob/master/src/types/collections.ts)
 
 [![16 exports](https://img.shields.io/badge/exports-16-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/types/collections.ts)
@@ -31,5 +30,4 @@ Here you can find common types, generic types and type guards.
 ### [misc](https://github.com/JanMalch/ts-experiments/blob/master/src/types/misc.ts)
 
 [![18 exports](https://img.shields.io/badge/exports-18-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/types/misc.ts)
-
 <!-- TOC:END -->
