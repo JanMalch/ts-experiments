@@ -2,7 +2,7 @@
 
 <!-- SUMMARY:START -->
 
-RFC 7807 utils
+[RFC 7807](https://tools.ietf.org/html/rfc7807) utilities. Documentation is in part copied from this very RFC.
 
 <!-- SUMMARY:END -->
 
