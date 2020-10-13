@@ -13,7 +13,6 @@
  * data.addressId = data.userId;     // error
  * @typeparam T name of the nominal type
  * @typeparam D the actual data type
- * @author https://github.com/JanMalch/ts-experiments
  */
 export type Nominal<T, D> = { _type: T } & D;
 
@@ -34,7 +33,6 @@ export type Nominal<T, D> = { _type: T } & D;
  * const res = api();
  * process(res);            // error
  * process(validate(res));  // ok
- * @author https://github.com/JanMalch/ts-experiments
  */
 export type Unvalidated<T> = Nominal<'Unvalidated', T>;
 
@@ -61,7 +59,6 @@ export type Class<T> = new (...args: any[]) => T;
  * const res = api();
  * process(res);            // error
  * process(validate(res));  // ok
- * @author https://github.com/JanMalch/ts-experiments
  */
 export type Validated<T> = Nominal<'Validated', T>;
 

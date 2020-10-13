@@ -1,6 +1,5 @@
 /**
  * Class for common String manipulation and other utils.
- * @author https://github.com/JanMalch/ts-experiments
  */
 export class Strings {
   /**

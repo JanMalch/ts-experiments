@@ -4,7 +4,6 @@
   "description": "A collection of fun and/or useful things you can do with TypeScript.",
   "scripts": {
     "build": "tsc",
-    "prelint": "ts-node -r tsconfig-paths/register tools/check-for-missing-author-doc-tag.ts",
     "lint": "eslint src/**/*.ts --fix",
     "test": "jest",
     "tocs": "ts-node -r tsconfig-paths/register tools/generate-tocs.ts",

@@ -3,7 +3,6 @@ import { Reducer, VIAFn } from '@ts-experiments/types/functions';
 /**
  * dont set an accumalator
  * @param valueSelector
- * @author https://github.com/JanMalch/ts-experiments
  */
 export function maxBy<I, O>(valueSelector: (value: I) => O): Reducer<I, I> {
   return (accumulator, currentValue) => {
@@ -16,7 +15,6 @@ export function maxBy<I, O>(valueSelector: (value: I) => O): Reducer<I, I> {
 /**
  * dont set an accumalator
  * @param valueSelector
- * @author https://github.com/JanMalch/ts-experiments
  */
 export function minBy<I, O>(valueSelector: (value: I) => O): Reducer<I, I> {
   return (accumulator, currentValue) => {
@@ -34,7 +32,6 @@ export function minBy<I, O>(valueSelector: (value: I) => O): Reducer<I, I> {
  * @see scan.concat
  * @example
  *
- * @author https://github.com/JanMalch/ts-experiments
  */
 export function scan<T, O = T>(
   nextFn: (
