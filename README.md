@@ -17,7 +17,7 @@ Make sure to checkout [the list below](#notable-libraries-and-links) for actuall
 <!-- TOTAL:START -->
 
 [![148 exports](https://img.shields.io/badge/exports-148-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
-![Build, Test, Lint](https://github.com/JanMalch/ts-experiments/workflows/Build,%20Test,%20Lint/badge.svg)
+[![Build, Test, Lint](https://github.com/JanMalch/ts-experiments/workflows/Build,%20Test,%20Lint/badge.svg)](https://github.com/JanMalch/ts-experiments/actions?query=workflow%3A%22Build%2C+Test%2C+Lint%22)
 ![documentation: lacking](https://img.shields.io/badge/documentation-lacking-success)
 ![coverage: abysmal](https://img.shields.io/badge/coverage-abysmal-success)
 
