@@ -18,7 +18,7 @@ export class Sanitizers {
   /**
    * Function that will return the value unchanged.
    */
-  public static unchanged: Sanitizer = (i) => i;
+  public static unchanged = <T>(i: T): T => i;
 
   /**
    * Function that will change a value to `MARKED_FOR_REMOVAL`.
@@ -118,10 +118,10 @@ export class Sanitizers {
   /**
    * Creates a function that will concatenate the given functions and pass the result from one to the next.
    */
-  public static compose(sanitizers: Sanitizer[]): Sanitizer {
+  public static compose(sanitizers: Sanitizer<any>[]): Sanitizer<any> {
     return (value: any) =>
       sanitizers.reduce(
-        (prevValue: any, sanFn: Sanitizer) => sanFn(prevValue),
+        (prevValue: any, sanFn: Sanitizer<any>) => sanFn(prevValue),
         value
       );
   }
@@ -156,7 +156,7 @@ export class Sanitizers {
       const postSani = sanitizers.post ?? identity;
       return Object.entries(formValue)
         .map(([key, value]) => {
-          const fieldSani: Sanitizer =
+          const fieldSani: Sanitizer<any> =
             (sanitizers.fields as any)?.[key] ?? identity;
           return [key, postSani(fieldSani(preSani(value)))];
         })
