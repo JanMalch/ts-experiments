@@ -9,9 +9,7 @@
 ## Contents
 
 <!-- TOC:START -->
-
 ### [index](https://github.com/JanMalch/ts-experiments/blob/master/src/problems/index.ts)
 
 [![3 exports](https://img.shields.io/badge/exports-3-blue)](https://github.com/JanMalch/ts-experiments/blob/master/src/problems/index.ts)
-
 <!-- TOC:END -->
