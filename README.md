@@ -89,6 +89,7 @@ This and that
 ## Notable libraries and links
 
 - [comparing](https://www.npmjs.com/package/comparing)
+- [ts-code-contracts](https://www.npmjs.com/package/ts-code-contracts)
 - [fp-ts](http://npmjs.com/package/fp-ts) and [io-ts](http://npmjs.com/package/io-ts)
 - [type-fest](https://www.npmjs.com/package/type-fest)
 - [lodash](https://www.npmjs.com/package/lodash)

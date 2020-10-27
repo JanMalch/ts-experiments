@@ -2,7 +2,7 @@
 
 <!-- SUMMARY:START -->
 
-Contracts for code
+Functions that enable design by contract. A more sophisticated library of these is [ts-code-contracts](https://www.npmjs.com/package/ts-code-contracts).
 
 <!-- SUMMARY:END -->
 
