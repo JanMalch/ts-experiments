@@ -1,3 +1,5 @@
+import { objectKeys } from "@ts-experiments/collections/operations/typed-object-methods";
+
 export function invert<T extends Record<string, unknown>>(
   value: T
 ): { [key: string]: keyof T } {
@@ -32,4 +34,13 @@ export function mapObjectValues<
       (acc as any)[key] = mapFn(value as any, key as any);
       return acc;
     }, {} as O);
+}
+
+export function sortGroupValues<T>(sortFn: (a: T, b: T) => number) {
+  return <R extends Record<keyof any, T[]>>(groups: R): R => {
+    return objectKeys(groups).reduce((acc, key) => {
+      acc[key] = groups[key].sort(sortFn);
+      return acc;
+    }, {} as R);
+  };
 }
