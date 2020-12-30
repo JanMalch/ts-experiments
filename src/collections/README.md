@@ -12,6 +12,7 @@ Create new collections based on other collections or reduce them to a certain va
 ## Contents
 
 <!-- TOC:START -->
+
 ### [classes](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/classes/)
 
 Classes that represent certain types of collections.
@@ -24,5 +25,6 @@ Classes that represent certain types of collections.
 
 These files contain function that create new collections or values based on other collections.
 
-[![32 exports](https://img.shields.io/badge/exports-32-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/operations/)
+[![33 exports](https://img.shields.io/badge/exports-33-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/operations/)
+
 <!-- TOC:END -->
