@@ -12,6 +12,7 @@
     "posttocs:commit": "git add . && git commit -m \"chore(tocs): update TOCs\" && git push",
     "prettier": "prettier --write \"./**/*.{ts,js,json,md}\""
   },
+  "private": true,
   "keywords": [],
   "author": "JanMalch",
   "repository": {
