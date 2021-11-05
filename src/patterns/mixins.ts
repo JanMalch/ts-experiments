@@ -1,13 +1,12 @@
 import { Class } from '@ts-experiments/types/misc';
 
-export function Mixin(...baseCtors: Class<any>[]) {
-  // eslint-disable-next-line @typescript-eslint/ban-types
-  return function (derivedCtor: Object) {
+/* eslint-disable */
+export function Mixin(...baseCtors: Class<unknown>[]) {
+  return function (derivedCtor: any): void {
     baseCtors.forEach((baseCtor) => {
       Object.getOwnPropertyNames(baseCtor.prototype).forEach((name) => {
-        // TODO: !); ?
         Object.defineProperty(
-          Object.getPrototypeOf(derivedCtor),
+          derivedCtor.prototype,
           name,
           Object.getOwnPropertyDescriptor(baseCtor.prototype, name)!
         );
@@ -15,3 +14,4 @@ export function Mixin(...baseCtors: Class<any>[]) {
     });
   };
 }
+/* eslint-enable */
