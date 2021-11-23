@@ -16,7 +16,7 @@ Make sure to checkout [the list below](#notable-libraries-and-links) for actuall
 
 <!-- TOTAL:START -->
 
-[![149 exports](https://img.shields.io/badge/exports-149-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
+[![152 exports](https://img.shields.io/badge/exports-152-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
 ![Build, Test, Lint](https://github.com/JanMalch/ts-experiments/workflows/Build,%20Test,%20Lint/badge.svg)
 ![documentation: lacking](https://img.shields.io/badge/documentation-lacking-success)
 ![coverage: abysmal](https://img.shields.io/badge/coverage-abysmal-success)
@@ -74,7 +74,7 @@ Various utilties that simplify patterns.
 
 Here you can find common types, generic types and type guards.
 
-[![65 exports](https://img.shields.io/badge/exports-65-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/types/)
+[![68 exports](https://img.shields.io/badge/exports-68-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/types/)
 
 ---
 
