@@ -27,9 +27,11 @@ export class Sanitizers {
   public static removeIf<I>(
     removeValue: I | Predicate<I>
   ): Sanitizer<I, I | typeof Sanitizers.MARKED_FOR_REMOVAL> {
-    const predicate = (typeof removeValue === 'function'
-      ? removeValue
-      : (v: I) => removeValue === v) as Predicate<I>;
+    const predicate = (
+      typeof removeValue === 'function'
+        ? removeValue
+        : (v: I) => removeValue === v
+    ) as Predicate<I>;
     return (value: I) =>
       predicate(value) ? Sanitizers.MARKED_FOR_REMOVAL : value;
   }
@@ -52,9 +54,9 @@ export class Sanitizers {
   public static toNullIf<I>(
     nullValue: I | Predicate<I>
   ): Sanitizer<I, I | null> {
-    const predicate = (typeof nullValue === 'function'
-      ? nullValue
-      : (v: I) => nullValue === v) as Predicate<I>;
+    const predicate = (
+      typeof nullValue === 'function' ? nullValue : (v: I) => nullValue === v
+    ) as Predicate<I>;
     return (value: I) => (value == null || predicate(value) ? null : value);
   }
 

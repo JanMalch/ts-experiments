@@ -11,7 +11,9 @@ export class ObjectSanitizer<I, O = I> {
   public sanitize(formValue: I): O {
     return Object.entries(formValue)
       .map(([key, value]) => {
-        const matchingSanitizer: Sanitizer<any> = (this.formSanitizers as any)[key];
+        const matchingSanitizer: Sanitizer<any> = (this.formSanitizers as any)[
+          key
+        ];
         if (!matchingSanitizer) {
           return [key, value];
         }

@@ -5,7 +5,7 @@ describe('flyweight', () => {
     const octalLookup = new Flyweight<string, number>((key) =>
       parseInt(key, 8)
     );
-    spyOn(octalLookup, 'factoryFn' as any).and.callThrough();
+    jest.spyOn(octalLookup, 'factoryFn' as any);
     expect(octalLookup.get('0')).toBe(0);
     expect(octalLookup.get('10')).toBe(8);
     expect(octalLookup.get('0')).toBe(0);

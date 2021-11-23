@@ -1,7 +1,8 @@
 import {
   invert,
-  mapObjectValues, sortGroupValues
-} from "@ts-experiments/collections/operations/dicts";
+  mapObjectValues,
+  sortGroupValues,
+} from '@ts-experiments/collections/operations/dicts';
 
 describe('invert', () => {
   it('should flip key and values', () => {
@@ -43,12 +44,12 @@ describe('mapObjectValues', () => {
 describe('sortGroupValues', () => {
   it('should sort the values of a group in a dict', () => {
     const naturalOrder = (a: number, b: number) => a - b;
-    const input = { a: [0, 3, 1], b: [-1, 3, 4 ]};
+    const input = { a: [0, 3, 1], b: [-1, 3, 4] };
     const actual = sortGroupValues(naturalOrder)(input);
     expect(actual).toEqual({
       a: [0, 1, 3],
-      b: [-1, 3, 4]
+      b: [-1, 3, 4],
     });
     expect(actual).not.toBe(input);
-  })
-})
+  });
+});

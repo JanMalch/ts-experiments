@@ -78,11 +78,9 @@ export function createRecordKeysGuard<K extends keyof any, T = any>(
   };
 }
 
-export function createRecordGuard<T extends Record<keyof any, any>>(
-  guards: {
-    [K in keyof T]: TypeGuard<T[K]>;
-  }
-): TypeGuard<T> {
+export function createRecordGuard<T extends Record<keyof any, any>>(guards: {
+  [K in keyof T]: TypeGuard<T[K]>;
+}): TypeGuard<T> {
   return (value: any): value is T => {
     if (!isRecord(value)) {
       return false;

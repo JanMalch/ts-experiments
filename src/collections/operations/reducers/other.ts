@@ -44,7 +44,7 @@ export function scan<T, O = T>(
 ): Reducer<O[], T> {
   return (acc, curr, index, array) => {
     if (index === 0) {
-      acc.push(firstFn ? firstFn(curr, index, array) : ((curr as any) as O));
+      acc.push(firstFn ? firstFn(curr, index, array) : (curr as any as O));
       return acc;
     }
     const prev = acc[index - 1];

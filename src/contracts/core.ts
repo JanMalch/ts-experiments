@@ -103,7 +103,7 @@ export class Contract {
     let thrownErr: Error | undefined = undefined;
     try {
       fn();
-    } catch (e) {
+    } catch (e: any) {
       thrownErr = e;
       ok = false;
     }

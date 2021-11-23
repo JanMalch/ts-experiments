@@ -17,9 +17,9 @@ export function trimValue<T>(value: T): T {
   if (value == null) {
     return value;
   } else if (typeof value === 'string') {
-    return (value.trim() as unknown) as T;
+    return value.trim() as unknown as T;
   } else if (Array.isArray(value)) {
-    return (trimArray(value) as unknown) as T;
+    return trimArray(value) as unknown as T;
   } else if (isObjectLiteral(value)) {
     return trimObjectLiteral(value);
   } else if (typeof value === 'object') {
@@ -45,7 +45,7 @@ export function trimArray<T>(value: T[]): T[] {
  * Returns a new object.
  * @see trimValue
  */
-export function trimObjectLiteral<T extends any>(value: T): T {
+export function trimObjectLiteral<T>(value: T): T {
   if (!isObjectLiteral(value)) {
     return value;
   }

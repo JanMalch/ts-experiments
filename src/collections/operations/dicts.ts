@@ -1,4 +1,4 @@
-import { objectKeys } from "@ts-experiments/collections/operations/typed-object-methods";
+import { objectKeys } from '@ts-experiments/collections/operations/typed-object-methods';
 
 export function invert<T extends Record<string, unknown>>(
   value: T
@@ -9,9 +9,9 @@ export function invert<T extends Record<string, unknown>>(
   }, {} as any);
 }
 
-export function invertGroup<T>(
-  value: Record<keyof any, T[]>
-): { [key: string]: keyof T } {
+export function invertGroup<T>(value: Record<keyof any, T[]>): {
+  [key: string]: keyof T;
+} {
   return Object.keys(value).reduce((acc, key) => {
     const values = value[key] as any[];
     values.forEach((v) => {

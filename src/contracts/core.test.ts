@@ -6,7 +6,7 @@ describe('core', () => {
       try {
         Contract.requires(false);
         fail('Contract.requires should throw');
-      } catch (e) {
+      } catch (e: any) {
         expect(e.name).toBe('PreconditionError');
       }
     });
