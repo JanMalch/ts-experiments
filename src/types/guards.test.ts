@@ -1,23 +1,26 @@
 import {
-  arrayGuard,
+  createArrayGuard,
   isNumber,
-  recordKeysGuard,
-  recordValuesGuard,
+  createRecordKeysGuard,
+  createRecordValuesGuard,
+  createRecordGuard,
+  isString,
+  isFiniteNumber,
 } from '@ts-experiments/types/guards';
 
 describe('guard factories', () => {
-  describe('arrayGuard', () => {
+  describe('createArrayGuard', () => {
     it('should verify the type of the items', () => {
-      const numberArrayGuard = arrayGuard(isNumber);
+      const numberArrayGuard = createArrayGuard(isNumber);
       expect(numberArrayGuard([0, 1, 2, 3])).toBe(true);
       expect(numberArrayGuard([])).toBe(true);
       expect(numberArrayGuard([0, '1', 2, 3])).toBe(false);
       expect(numberArrayGuard('not even an array')).toBe(false);
     });
   });
-  describe('recordValuesGuard', () => {
+  describe('createRecordValuesGuard', () => {
     it('should verify the type of the values', () => {
-      const numberValuesGuard = recordValuesGuard(isNumber);
+      const numberValuesGuard = createRecordValuesGuard(isNumber);
       expect(
         numberValuesGuard({
           a: 0,
@@ -34,9 +37,9 @@ describe('guard factories', () => {
       expect(numberValuesGuard('not even a record')).toBe(false);
     });
   });
-  describe('recordKeysGuard', () => {
+  describe('createRecordKeysGuard', () => {
     it('should verify that the record has all keys', () => {
-      const keysGuard = recordKeysGuard('a', 'b');
+      const keysGuard = createRecordKeysGuard('a', 'b');
       expect(
         keysGuard({
           a: 0,
@@ -50,6 +53,33 @@ describe('guard factories', () => {
         })
       ).toBe(false);
       expect(keysGuard('not even a record')).toBe(false);
+    });
+  });
+  describe('createRecordsGuard', () => {
+    it('should verify that both keys and values match', () => {
+      const recordGuard = createRecordGuard({
+        name: isString,
+        age: isFiniteNumber,
+      });
+      expect(
+        recordGuard({
+          name: 'a',
+          age: 1,
+          extraFields: true,
+        })
+      ).toBe(true);
+      expect(recordGuard({})).toBe(false);
+      expect(
+        recordGuard({
+          name: '',
+        })
+      ).toBe(false);
+      expect(
+        recordGuard({
+          name: 0,
+        })
+      ).toBe(false);
+      expect(recordGuard('not even a record')).toBe(false);
     });
   });
 });
