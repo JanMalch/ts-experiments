@@ -10,7 +10,8 @@
     "pretocs:commit": "git diff-index --quiet HEAD",
     "tocs:commit": "npm run tocs",
     "posttocs:commit": "git add . && git commit -m \"chore(tocs): update TOCs\" && git push",
-    "prettier": "prettier --write \"./**/*.{ts,js,json,md}\""
+    "prettier": "prettier --write \"./**/*.{ts,js,json,md}\"",
+    "prepare": "husky install"
   },
   "private": true,
   "keywords": [],
@@ -33,7 +34,7 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^4.0.0",
     "glob": "^7.2.0",
-    "husky": "^4.3.6",
+    "husky": "^7.0.0",
     "jest": "^27.4.5",
     "lint-staged": "^12.1.4",
     "prettier": "^2.5.1",
@@ -72,11 +73,5 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged --relative --concurrent=1",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }
