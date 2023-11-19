@@ -1,4 +1,5 @@
 import { strictEqual } from '@ts-experiments/collections/operations/core';
+import { associate } from '@ts-experiments/collections/operations/reducers/dicts';
 import { BiPredicate } from '@ts-experiments/types/functions';
 
 /**
@@ -53,5 +54,48 @@ export function hasAnyOf<T>(
       }
     }
     return false;
+  };
+}
+
+/**
+ * Partitions `incoming` and `existing` items
+ * into `created`, `updated`, `unchanged`, or `deleted`.
+ * All lists but `deleted` will contain items from `incoming`.
+ * @param incoming
+ * @param existing
+ * @param identify
+ * @param isEqual
+ */
+export function partitionByCuud<T>(
+  incoming: T[],
+  existing: T[],
+  identify: (item: T) => unknown,
+  isEqual: (a: T, b: T) => boolean
+): { deleted: T[]; created: T[]; unchanged: T[]; updated: T[] } {
+  const created: T[] = [];
+  const updated: T[] = [];
+  const unchanged: T[] = [];
+
+  const existingById = new Map(existing.map((item) => [identify(item), item]));
+
+  for (const item of incoming) {
+    const id = identify(item);
+    const old = existingById.get(id);
+    if (old !== undefined) {
+      if (isEqual(item, old)) {
+        unchanged.push(item);
+      } else {
+        updated.push(item);
+      }
+    } else {
+      created.push(item);
+    }
+  }
+
+  return {
+    created,
+    updated,
+    unchanged,
+    deleted: Array.from(existingById.values()),
   };
 }
