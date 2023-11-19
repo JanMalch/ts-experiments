@@ -15,18 +15,15 @@ You are also welcome to make a PR for new additions and improvements.
 Make sure to checkout [the list below](#notable-libraries-and-links) for actually battle-tested libraries and helpful links.
 
 <!-- TOTAL:START -->
-
-[![152 exports](https://img.shields.io/badge/exports-152-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
+[![153 exports](https://img.shields.io/badge/exports-153-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src)
 ![Build, Test, Lint](https://github.com/JanMalch/ts-experiments/workflows/Build,%20Test,%20Lint/badge.svg)
 ![documentation: lacking](https://img.shields.io/badge/documentation-lacking-success)
 ![coverage: abysmal](https://img.shields.io/badge/coverage-abysmal-success)
-
 <!-- TOTAL:END -->
 
 ## Contents
 
 <!-- TOC:START -->
-
 ### [collections](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/)
 
 Here you can find everything concerning collections:
@@ -34,7 +31,7 @@ Classes like `Queue` and `Stack`, but mostly operations to simplify your work wi
 Create new collections based on other collections or reduce them to a certain value.
 [Special type guards are in the "types" section.](https://github.com/JanMalch/ts-experiments/blob/master/src/types/guards.ts#L43-L72)
 
-[![35 exports](https://img.shields.io/badge/exports-35-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/)
+[![36 exports](https://img.shields.io/badge/exports-36-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/collections/)
 
 ---
 
@@ -83,7 +80,6 @@ Here you can find common types, generic types and type guards.
 This and that
 
 [![15 exports](https://img.shields.io/badge/exports-15-blue)](https://github.com/JanMalch/ts-experiments/tree/master/src/utils/)
-
 <!-- TOC:END -->
 
 ## Notable libraries and links
